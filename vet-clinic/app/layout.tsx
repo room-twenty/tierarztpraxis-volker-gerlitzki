@@ -1,29 +1,18 @@
-import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-import clsx from "clsx";
-
-import { Providers } from "./providers";
-
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
-    title: {
-        default: siteConfig.name,
-        template: `%s - ${siteConfig.name}`,
-    },
-    description: siteConfig.description,
-    icons: {
-        icon: "/favicon.ico",
-    },
+    title: "Tierarztpraxis Volker Gerlitzki",
+    description: "Ihr Tierarzt in Hamburg Bergedorf.",
 };
 
-export const viewport: Viewport = {
-    themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "white" },
-        { media: "(prefers-color-scheme: dark)", color: "black" },
-    ],
-};
+const montserrat = Montserrat({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+});
 
 export default function RootLayout({
     children,
@@ -31,23 +20,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html suppressHydrationWarning lang="en">
-            <head />
-            <body
-                className={clsx(
-                    "min-h-screen bg-background font-sans antialiased",
-                    fontSans.variable
-                )}
-            >
-                <Providers
-                    themeProps={{ attribute: "class", defaultTheme: "dark" }}
-                >
-                    <div className="relative flex flex-col h-screen">
-                        <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-                            {children}
-                        </main>
-                    </div>
-                </Providers>
+        <html lang="de">
+            <body className={montserrat.className}>
+                <Header />
+                <main>{children}</main>
+                <Footer />
             </body>
         </html>
     );

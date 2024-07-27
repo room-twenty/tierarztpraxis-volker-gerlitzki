@@ -1,7 +1,7 @@
 export default function Home() {
     return (
-        <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-            <h1>Hallo</h1>
-        </section>
+        <>
+            <h1>Ich bin die Startseite</h1>
+        </>
     );
 }
