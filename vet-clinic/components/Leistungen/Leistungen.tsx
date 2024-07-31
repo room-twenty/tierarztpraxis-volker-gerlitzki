@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {} from '@fortawesome/free-solid-svg-icons';
 const Leistungen = () => {
   return (
     <>
