@@ -1,14 +1,10 @@
 import {
-  faPaw,
   faStethoscope,
-  faDog,
   faUserDoctor,
   faBriefcaseMedical,
   faSyringe,
   faCommentMedical,
-  faBone,
   faShieldDog,
-  faFileWaveform,
 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
