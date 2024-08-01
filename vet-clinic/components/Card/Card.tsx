@@ -20,7 +20,7 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
       />
     )}
     <h2 className={commonStylings.heading}>{title}</h2>
-    <ul className="fa-ul mt-">
+    <ul className="fa-ul">
       {items.map((item, index) => (
         <li key={item + index} className="flex flex-row">
           <span className="fa-li">
