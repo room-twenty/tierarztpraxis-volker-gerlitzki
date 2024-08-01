@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
-interface ILeistungen {
+export interface ILeistungen {
   title: string;
   items: string[];
   faIcon: IconDefinition;
