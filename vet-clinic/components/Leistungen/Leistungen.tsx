@@ -1,12 +1,12 @@
-import Card from '../Card/Card';
-import { leistungen } from '@/assets/dataArrays/leistungen';
+import { ILeistungen, leistungen } from '@/assets/dataArrays/leistungen';
+import { LeistungenCard } from '../Card/Card';
 
 const Leistungen = () => {
   return (
     <>
-      <h1>Leistungen</h1>
-      {leistungen.map((leistung, index) => (
-        <Card key={leistung.title + index + 1} {...leistung} />
+      <h2>Unsere Leistungen</h2>
+      {leistungen.map((leistung: ILeistungen, index) => (
+        <LeistungenCard key={leistung.title + index + 1} {...leistung} />
       ))}
     </>
   );
