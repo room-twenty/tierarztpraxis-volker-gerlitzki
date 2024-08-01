@@ -1,54 +1,75 @@
+import {
+  faPaw,
+  faStethoscope,
+  faDog,
+  faUserDoctor,
+  faBriefcaseMedical,
+  faSyringe,
+  faCommentMedical,
+  faBone,
+  faShieldDog,
+  faFileWaveform,
+} from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+
 interface ILeistungen {
   title: string;
   items: string[];
+  faIcon: IconDefinition;
 }
 
 export const leistungen: ILeistungen[] = [
   {
     title: 'Diagnostik',
     items: [
-      'Röntgendiagnostik',
-      'Ultraschall-Untersuchungen',
-      'Laboruntersuchungen',
       'EKG',
-      'Allergietests und Desensibilisierung',
       'Geriatrie-Check',
+      'Röntgendiagnostik',
+      'Laboruntersuchungen',
+      'Ultraschall-Untersuchungen',
+      'Allergietests und Desensibilisierung',
     ],
-  },
-  {
-    title: 'Physiotherapeutische Anwendungen',
-    items: [
-      'Nach orthopädischen Operationen (z.B. zur Schmerztherapie)',
-      'Revitalisierung im Bewegungsapparat (Muskelaufbau)',
-      'Zur Motivation der Bewegung bei älteren Tieren oder zur Gewichtsreduktion',
-    ],
-  },
-  {
-    title: 'Weitere Leistungen',
-    items: [
-      'Augenheilkunde',
-      'Zahnheilkunde',
-      'Elektronische Tierkennzeichnung/EU Heimtierpässe',
-      'Tierärztliche Vollapotheke',
-      'Große Auswahl an Diätfuttermitteln',
-      'Impferinnerung',
-      'EC-Kartenzahlung',
-      'Hunde- und Katzenfriseur',
-    ],
-  },
-  {
-    title: 'Züchter Spezifische Analysen',
-    items: ['DNA-Bestimmungen', 'Blutgruppen-Bestimmung', 'Reihenuntersuchen'],
+    faIcon: faStethoscope,
   },
   {
     title: 'Beratung',
-    items: ['Beratung bei Verhaltensproblemen', 'Ernährungsberatung'],
+    items: ['Ernährungsberatung', 'Beratung bei Verhaltensproblemen'],
+    faIcon: faUserDoctor,
   },
   {
     title: 'Operationen und Chirurgie',
     items: [
-      'Injektions-, Inhalations- und Kurznarkosen',
       'Weichteil- und Knochenchirurgie',
+      'Injektions-, Inhalations- und Kurznarkosen',
     ],
+    faIcon: faSyringe,
+  },
+  {
+    title: 'Physiotherapeutische Anwendungen',
+    items: [
+      'Revitalisierung im Bewegungsapparat (Muskelaufbau)',
+      'Nach orthopädischen Operationen (z.B. zur Schmerztherapie)',
+      'Zur Motivation der Bewegung bei älteren Tieren oder zur Gewichtsreduktion',
+    ],
+    faIcon: faCommentMedical,
+  },
+  {
+    title: 'Züchter Spezifische Analysen',
+    items: ['DNA-Bestimmungen', 'Reihenuntersuchen', 'Blutgruppen-Bestimmung'],
+    faIcon: faShieldDog,
+  },
+  {
+    title: 'Weitere Leistungen',
+    items: [
+      'Zahnheilkunde',
+      'Augenheilkunde',
+      'Impferinnerung',
+      'EC-Kartenzahlung',
+      'Hunde- und Katzenfriseur',
+      'Tierärztliche Vollapotheke',
+      'Große Auswahl an Diätfuttermitteln',
+      'Elektronische Tierkennzeichnung / EU Heimtierpässe',
+    ],
+    faIcon: faBriefcaseMedical,
   },
 ];
