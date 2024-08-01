@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {} from '@fortawesome/free-solid-svg-icons';
+import { faStethoscope } from '@fortawesome/free-solid-svg-icons';
+// faPaw faDog faUserDoctor faBriefcaseMedical faSyringe faCommentMedical faBone faShieldDog faFileWaveForm
 const Leistungen = () => {
   return (
     <>
