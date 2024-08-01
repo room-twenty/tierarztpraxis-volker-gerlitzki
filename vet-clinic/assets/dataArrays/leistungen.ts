@@ -1,4 +1,9 @@
-export const leistungen = [
+interface ILeistungen {
+  title: string;
+  items: string[];
+}
+
+export const leistungen: ILeistungen[] = [
   {
     title: 'Diagnostik',
     items: [
