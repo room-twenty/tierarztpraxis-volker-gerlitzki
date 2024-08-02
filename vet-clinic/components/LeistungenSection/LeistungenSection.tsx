@@ -21,7 +21,7 @@ const LeistungenSection = ({
       {!isPathLeistungen && (
         <Link
           href={'/leistungen'}
-          className="mb-4 w-max self-center rounded-lg bg-dblue p-3 font-semibold text-[white]">
+          className="mb-4 w-max self-center rounded-lg bg-lblue p-3 font-semibold text-[white] shadow-md shadow-dblue hover:bg-dblue hover:shadow-lblue active:bg-dblue active:shadow-none">
           Mehr Leistungen
         </Link>
       )}
