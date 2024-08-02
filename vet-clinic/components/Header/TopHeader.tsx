@@ -5,19 +5,24 @@ import Image from 'next/image';
 
 const TopHeader = () => {
   return (
-    <header>
-      <Image className="w-[20rem]" src={Logo} alt="Dr. Gerlitki Logo" />
+    <header className="flex items-center bg-blue-200">
       <a href="tel:+49407214244">
-        <span>
-          <FontAwesomeIcon className="w-[2rem]" icon={faPhone} />
+        <span className="hover: hover:text-red-800">
+          <FontAwesomeIcon className="w-[1rem]" icon={faPhone} />
+          Anruf
         </span>
-        Termin vereinbaren
       </a>
+
+      <Image
+        className="w-[15rem] text-blue-900"
+        src={Logo}
+        alt="Dr. Gerlitki Logo"
+      />
       <a href="#">
-        <span>
-          <FontAwesomeIcon className="w-[2rem]" icon={faLocationDot} />
+        <span className="hover: hover:text-red-800">
+          <FontAwesomeIcon className="w-[1rem]" icon={faLocationDot} />
+          Anfahrt
         </span>
-        Anfahrt
       </a>
     </header>
   );
