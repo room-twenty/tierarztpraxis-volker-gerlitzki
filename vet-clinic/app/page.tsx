@@ -5,7 +5,11 @@ export default function Home() {
   return (
     <>
       {/* <h1>Ich bin die Startseite</h1> */}
-      <LeistungenSection sliceAmount={[0, 3]} currentPath="/" />
+      <LeistungenSection
+        sliceAmount={[0, 3]}
+        currentPath="/"
+        styling="flex flex-col"
+      />
       <DocTeamSection />
     </>
   );
