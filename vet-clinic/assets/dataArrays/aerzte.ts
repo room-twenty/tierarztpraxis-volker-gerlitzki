@@ -7,7 +7,7 @@ export interface ITeam {
 export const team: ITeam[] = [
   {
     imgSrc: '/images/aerzte/volker.jpeg',
-    name: 'Tierarzt Dr. Volker Robert Gerlitzki',
+    name: 'Dr. Volker Robert Gerlitzki',
     infoTexte: [
       'Von 1983 bis 1989 hat Dr. Gerlitzki Tiermedizin an der tierärztlichen Hochschule in Hannover studiert und begleitend in den verschiedenen Kliniken an der Hochschule, z.B. in der Vogelklinik, der Heimtierklinik, und der Klinik für kleine Haustiere gearbeitet. Nach seiner Approbation 1989 war er vielfach als Stellvertreter für verschiedene Kleintierpraxen rund um Hannover sowie als Klinikreferent tätig.',
       'Seine erste eigene Praxis eröffnete er Ende 1993 in Form einer Gemeinschaftspraxis mit Schwerpunkten in den Bereichen Kleintiere und Pferde. 1996 promovierte Dr. Gerlitzki zum Thema Insektengifte. Anschließend übernahm er eine bestehende Kleintierpraxis in Hamburg Bergedorf.',
@@ -17,7 +17,7 @@ export const team: ITeam[] = [
   },
   {
     imgSrc: '/images/aerzte/birgit.jpg',
-    name: 'Tierärztin Dr. Birgit Joswig',
+    name: 'Dr. Birgit Joswig',
     infoTexte: [
       'Von 2000 bis 2009 führte sie eine eigene Praxis in Vierlanden.',
       'Seit 2009 ist sie für die pharmazeutische Industrie in der vorklinischen und klinischen Forschung tätig sowie feste Mitarbeiterin der Tierarztpraxis Dr. Gerlitzki.',
