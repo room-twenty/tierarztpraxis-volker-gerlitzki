@@ -4,19 +4,27 @@ import Link from 'next/link';
 interface LeistungenSectionProps {
   sliceAmount: [number, number?];
   currentPath: string;
+  styling?: string;
 }
 const LeistungenSection = ({
   sliceAmount,
   currentPath,
+  styling,
 }: LeistungenSectionProps) => {
   const isPathLeistungen = currentPath === '/leistungen';
   return (
-    <section>
+    <section className={`${styling}`}>
       <h2>Unsere Leistungen</h2>
       {leistungen.slice(...sliceAmount).map((leistung: ILeistungen, index) => (
         <LeistungenCard key={leistung.title + index + 1} {...leistung} />
       ))}
-      {!isPathLeistungen && <Link href={'/leistungen'}>mehr leistungen</Link>}
+      {!isPathLeistungen && (
+        <Link
+          href={'/leistungen'}
+          className="mb-4 w-max self-center rounded-lg bg-dblue p-3 font-semibold text-[white]">
+          Mehr Leistungen
+        </Link>
+      )}
     </section>
   );
 };
