@@ -14,7 +14,7 @@ const LeistungenSection = ({
   const isPathLeistungen = currentPath === '/leistungen';
   return (
     <section className={`${styling}`}>
-      <h2>Unsere Leistungen</h2>
+      <h2 className="headings-sm">Unsere Leistungen</h2>{' '}
       {leistungen.slice(...sliceAmount).map((leistung: ILeistungen, index) => (
         <LeistungenCard key={leistung.title + index + 1} {...leistung} />
       ))}

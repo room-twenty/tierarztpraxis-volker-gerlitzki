@@ -4,7 +4,7 @@ import { TeamCard } from '../Card/Card';
 const DocTeamSection = () => {
   return (
     <section>
-      <h2>Unsere Ärzte</h2>
+      <h2 className="headings-sm">Unsere Ärzte</h2>
       {team.map((mitglied: ITeam, index) => (
         <TeamCard key={mitglied.name + index + 1} {...mitglied} />
       ))}
