@@ -1,6 +1,6 @@
 const Fopening = () => {
   // create Array with objects for mapping, maybe fetching this in the future for editing via db
-
+  // create function to check the date, if current DAY is true => colorize font green
   return (
     <div>
       <h2>Öffnungszeiten</h2>
