@@ -1,9 +1,13 @@
+import Fcontact from './Fcontact';
+import Fheader from './Fheader';
+
 const Footer = () => {
-    return (
-        <div>
-            <h2>Ich bin ein Footer</h2>
-        </div>
-    );
+  return (
+    <section className="bg-blue-950 text-white">
+      <Fheader />
+      <Fcontact />
+    </section>
+  );
 };
 
 export default Footer;
