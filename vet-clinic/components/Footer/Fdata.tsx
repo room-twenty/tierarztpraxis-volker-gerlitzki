@@ -1,4 +1,6 @@
 const Fdata = () => {
+  // create Array with objects for mapping, maybe fetching this in the future for editing via db
+
   return (
     <div>
       <h2>Contact Us!</h2>

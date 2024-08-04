@@ -1,4 +1,6 @@
 const Fopening = () => {
+  // create Array with objects for mapping, maybe fetching this in the future for editing via db
+
   return (
     <div>
       <h2>Öffnungszeiten</h2>
