@@ -3,6 +3,7 @@ import { ITeam } from '@/assets/dataArrays/aerzte';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import ReadMore from '../ReadMore/ReadMore';
 
 const commonStylings: { container: string; heading: string } = {
   container:
@@ -21,17 +22,19 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
     )}
     <h2 className={commonStylings.heading}>{title}</h2>
     <ul className="fa-ul">
-      {items.map((item, index) => (
-        <li key={item + index} className="flex flex-row">
-          <span className="fa-li">
-            <FontAwesomeIcon
-              className="mr-1 mt-[0.2rem] w-[1rem] text-lblue"
-              icon={faPaw}
-            />
-          </span>
-          {item}
-        </li>
-      ))}
+      <ReadMore amountShown={3}>
+        {items.map((item, index) => (
+          <li key={item + index} className="flex flex-row">
+            <span className="fa-li">
+              <FontAwesomeIcon
+                className="mr-1 mt-[0.2rem] w-[1rem] text-lblue"
+                icon={faPaw}
+              />
+            </span>
+            {item}
+          </li>
+        ))}
+      </ReadMore>
     </ul>
   </div>
 );
@@ -46,11 +49,13 @@ const TeamCard = ({ imgSrc, name, infoTexte }: ITeam) => (
       className="place-self-center rounded-lg shadow-md shadow-lblue"
     />
     <h2 className={`${commonStylings.heading}`}>{name}</h2>
-    {infoTexte.map((infoText, index) => (
-      <p key={index} className="mb-3">
-        {infoText}
-      </p>
-    ))}
+    <ReadMore amountShown={1}>
+      {infoTexte.map((infoText, index) => (
+        <p key={index} className="mb-3">
+          {infoText}
+        </p>
+      ))}
+    </ReadMore>
   </div>
 );
 

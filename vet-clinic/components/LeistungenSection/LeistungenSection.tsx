@@ -13,8 +13,8 @@ const LeistungenSection = ({
 }: LeistungenSectionProps) => {
   const isPathLeistungen = currentPath === '/leistungen';
   return (
-    <section className={`${styling}`}>
-      <h2 className="text-dblue pt-2 text-center text-[1.7rem] font-semibold">
+    <section id={'leistungen'} className={`${styling}`}>
+      <h2 className="pt-2 text-center text-[1.7rem] font-semibold text-dblue">
         Unsere Leistungen
       </h2>{' '}
       {leistungen.slice(...sliceAmount).map((leistung: ILeistungen, index) => (
@@ -23,8 +23,8 @@ const LeistungenSection = ({
       {!isPathLeistungen && (
         <Link
           href={'/leistungen'}
-          className="bg-lblue shadow-dblue hover:bg-dblue hover:shadow-lblue active:bg-dblue mb-4 w-max self-center rounded-lg p-3 font-semibold text-[white] shadow-md active:shadow-none">
-          Mehr Leistungen
+          className="mb-4 w-max self-center rounded-lg bg-lblue p-3 font-semibold text-[white] shadow-md shadow-dblue hover:bg-dblue hover:shadow-lblue active:bg-dblue active:shadow-none">
+          Alle Leistungen
         </Link>
       )}
     </section>
