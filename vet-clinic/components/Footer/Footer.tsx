@@ -1,9 +1,16 @@
+import Fcontact from './Fcontact';
+import Fheader from './Fheader';
+import Fmap from './Fmap';
+
 const Footer = () => {
-    return (
-        <div>
-            <h2>Ich bin ein Footer</h2>
-        </div>
-    );
+  return (
+    <section className="bg-blue-950 p-2 pb-10 text-white">
+      {/* use framer motion here for master animation -> roll up from the bot */}
+      <Fheader />
+      <Fcontact />
+      <Fmap />
+    </section>
+  );
 };
 
 export default Footer;
