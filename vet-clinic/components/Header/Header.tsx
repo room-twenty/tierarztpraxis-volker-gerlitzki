@@ -1,11 +1,13 @@
-import TopHeader from "./TopHeader";
+import Navigation from './Navigation';
+import TopHeader from './TopHeader';
 
 const Header = () => {
-    return (
-        <>
-            <TopHeader/>
-        </>
-    );
+  return (
+    <>
+      <TopHeader />
+      <Navigation />
+    </>
+  );
 };
 
 export default Header;
