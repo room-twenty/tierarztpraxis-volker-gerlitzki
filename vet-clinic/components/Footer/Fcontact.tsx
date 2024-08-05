@@ -5,7 +5,6 @@ const Fcontact = () => {
   return (
     <div className="flex justify-around">
       {/* Animation with light fade-in from the bot */}
-
       <Fdata />
       <Fopening />
     </div>
