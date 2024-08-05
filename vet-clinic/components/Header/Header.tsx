@@ -1,9 +1,13 @@
+import Navigation from './Navigation';
+import TopHeader from './TopHeader';
+
 const Header = () => {
-    return (
-        <div>
-            <h2>Ich bin ein Header</h2>
-        </div>
-    );
+  return (
+    <>
+      <TopHeader />
+      <Navigation />
+    </>
+  );
 };
 
 export default Header;
