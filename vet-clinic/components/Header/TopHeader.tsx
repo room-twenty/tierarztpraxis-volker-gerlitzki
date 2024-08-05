@@ -5,35 +5,23 @@ import Image from 'next/image';
 
 const TopHeader = () => {
   return (
-    <header className="border-md items-space-around flex justify-evenly border-b border-blue-900 bg-white">
-      <Image
-        className="w-[15rem] text-blue-900"
-        src={Logo}
-        alt="Dr. Gerlitki Logo"
-      />
-      <button className="h-auto w-10 rounded-md border-2 border-solid border-blue-900 bg-green-400">
-        <a href="tel:+49407214244">
-          <span>
-            <FontAwesomeIcon
-              className="h-auto w-[2rem] text-white"
-              icon={faPhone}
-            />
-            {/*Anruf*/}
-          </span>
-        </a>
-      </button>
+    <header className="border-md items-space-around bg-white flex flex-col place-items-center p-2">
+      <div className="flex w-[100%] flex-row justify-between gap-5">
+        <button className="bg-green-400 text-white h-12 w-32 rounded-md border-2 p-2">
+          <a href="tel:+49407214244" className="flex justify-center gap-2">
+            <FontAwesomeIcon className="w-4" icon={faPhone} />
+            Anruf
+          </a>
+        </button>
 
-      <button className="h-auto w-10 rounded-md border-2 border-solid border-black bg-blue-300">
-        <a href="#">
-          <span>
-            <FontAwesomeIcon
-              className="w-[2rem] text-white"
-              icon={faLocationDot}
-            />
-            {/*Anfahrt*/}
-          </span>
-        </a>
-      </button>
+        <button className="text-white h-12 w-32 rounded-md border-2 bg-lblue p-2">
+          <a href="#" className="flex justify-center gap-2">
+            <FontAwesomeIcon className="w-4" icon={faLocationDot} />
+            Anfahrt
+          </a>
+        </button>
+      </div>
+      <Image className="" src={Logo} alt="Dr. Gerlitki Logo" />
     </header>
   );
 };
