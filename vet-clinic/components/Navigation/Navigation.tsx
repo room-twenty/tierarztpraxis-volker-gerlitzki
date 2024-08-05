@@ -1,23 +1,18 @@
 import Link from 'next/link';
 import React from 'react';
+import NavLink from '../NavLink/NavLink';
 
 const Navigation = () => {
   return (
-    <div className="no-wrap montserrat flex list-none justify-evenly bg-blue-300 text-white">
-      <li>
-        <a href="./">Startseite</a>
-      </li>
-      <li>
-        <a href="./">Leistungen</a>
-      </li>
+    <nav className="flex justify-evenly bg-lblue p-2">
+      <NavLink href="/">Startseite</NavLink>
 
-      <li>
-        <a href="./">Unser Team</a>
-      </li>
-      <li>
-        <a href="./">Blog</a>
-      </li>
-    </div>
+      <NavLink href="/leistungen">Leistungen</NavLink>
+
+      <NavLink href="#">Unser Team</NavLink>
+
+      <NavLink href="/blog">Blog</NavLink>
+    </nav>
   );
 };
 
