@@ -6,6 +6,11 @@ import Image from 'next/image';
 const TopHeader = () => {
   return (
     <header className="border-md items-space-around flex justify-evenly border-b border-blue-900 bg-white">
+      <Image
+        className="w-[15rem] text-blue-900"
+        src={Logo}
+        alt="Dr. Gerlitki Logo"
+      />
       <button className="h-auto w-10 rounded-md border-2 border-solid border-blue-900 bg-green-400">
         <a href="tel:+49407214244">
           <span>
@@ -18,11 +23,6 @@ const TopHeader = () => {
         </a>
       </button>
 
-      <Image
-        className="w-[15rem] text-blue-900"
-        src={Logo}
-        alt="Dr. Gerlitki Logo"
-      />
       <button className="h-auto w-10 rounded-md border-2 border-solid border-black bg-blue-300">
         <a href="#">
           <span>
