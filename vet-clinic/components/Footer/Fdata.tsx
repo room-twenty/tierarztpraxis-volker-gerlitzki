@@ -1,13 +1,22 @@
 const Fdata = () => {
-  // create Array with objects for mapping, maybe fetching this in the future for editing via db
-
+  // maybe fetching this in the future for editing via db
+  const contactData = {
+    name: 'Tierarztpraxis Gerlitzki',
+    street: { name: 'Wentorfer Straße', number: 15 },
+    city: { name: 'Hamburg', zip: 21029 },
+    tel: '040 - 721 42 44',
+    email: 'praxis@vet-gerlitzki.de',
+  };
   return (
+    // Render in 3 container, with icon and text
     <div>
-      <h2>Contact Us!</h2>
+      <div>
+        <p>Wentorfer Straße 15</p>
+        <p>21029 Hamburg</p>
+      </div>
       <ul>
-        <li>Wentorfer Straße 15</li>
-        <li>21029 Hamburg</li>
-        <li></li>
+        <li>Email: praxis@vet-gerlitzki.de</li>
+        <li>Telefon: 040 - 721 42 44</li>
       </ul>
     </div>
   );
