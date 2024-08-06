@@ -1,5 +1,11 @@
+import DatenschutzSection from '@/components/DatenschutzSection/DatenschutzSection';
+
 const DatenschutzPage = () => {
-  return <></>;
+  return (
+    <>
+      <DatenschutzSection />
+    </>
+  );
 };
 
 export default DatenschutzPage;

@@ -1,7 +1,11 @@
-import React from 'react';
+import ImpressumSection from '@/components/ImpressumSection/ImpressumSection';
 
 const ImpressumPage = () => {
-  return <></>;
+  return (
+    <>
+      <ImpressumSection />
+    </>
+  );
 };
 
 export default ImpressumPage;
