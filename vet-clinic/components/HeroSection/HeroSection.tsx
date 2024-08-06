@@ -3,16 +3,16 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <div className="grid grid-cols-12 grid-rows-6 gap-0">
-      <div className="col-span-12 row-span-6">
+    <div className="h-50 grid grid-cols-12 grid-rows-1">
+      <div className="col-span-12">
         <Image
-          className="z-10"
+          className="size-full place-self-center object-cover"
           src={Heroimage}
           alt="Border-Collie mit heraushängender Zunge rennt einem entgegen in Waldlandschaft"
         />
       </div>
-      <div className="col-span-8 col-start-3 row-span-4 row-start-2">
-        <h2>Slogan</h2>
+      <div className="absolute col-span-8 col-start-3 place-self-center text-[2rem] text-monza-600">
+        <h2 className="filter-blur rounded-lg bg-slate-400/30 p-2">Slogan</h2>
       </div>
     </div>
   );
