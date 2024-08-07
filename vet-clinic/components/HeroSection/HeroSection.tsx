@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <div className="h-50 grid grid-cols-12 grid-rows-1">
+    <div className="grid h-[30rem] grid-cols-12 grid-rows-1">
       <div className="col-span-12">
         <Image
           className="size-full place-self-center object-cover"
