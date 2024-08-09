@@ -1,4 +1,4 @@
-import Logo from '../../public/images/logo/logo_name.png';
+import Logo from '@/public/images/logo/logo_name.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
