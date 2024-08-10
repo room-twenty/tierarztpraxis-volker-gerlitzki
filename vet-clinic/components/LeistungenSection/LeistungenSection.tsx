@@ -1,7 +1,7 @@
 import { ILeistungen, leistungen } from '@/assets/dataArrays/leistungen';
 import { LeistungenCard } from '../Card/Card';
 import Link from 'next/link';
-import Button from '../Button';
+import Button from '../Button/Button';
 interface LeistungenSectionProps {
   sliceAmount: [number, number?];
   currentPath: string;
