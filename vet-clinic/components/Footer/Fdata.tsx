@@ -9,10 +9,7 @@ const contact = {
 };
 
 const Fdata = () => {
-  // maybe fetching this in the future for editing via db
   return (
-    // Render in 3 container, fade-in, and hover
-    // use getStaticProbs
     <div>
       <Fbutton contactStreet={contact.street} contactCity={contact.city} />
       <Fbutton contactTel={contact.tel} />
