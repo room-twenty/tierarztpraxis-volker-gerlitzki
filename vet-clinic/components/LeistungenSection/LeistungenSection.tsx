@@ -1,6 +1,7 @@
 import { ILeistungen, leistungen } from '@/assets/dataArrays/leistungen';
 import { LeistungenCard } from '../Card/Card';
 import Link from 'next/link';
+import Button from '../Button';
 interface LeistungenSectionProps {
   sliceAmount: [number, number?];
   currentPath: string;
@@ -21,11 +22,14 @@ const LeistungenSection = ({
         <LeistungenCard key={leistung.title + index + 1} {...leistung} />
       ))}
       {!isPathLeistungen && (
-        <Link
-          href={'/leistungen'}
-          className="mb-4 w-max self-center rounded-lg bg-lblue p-3 font-semibold text-[white] shadow-md shadow-dblue hover:bg-dblue hover:shadow-lblue active:bg-dblue active:shadow-none">
-          Alle Leistungen
-        </Link>
+        <Button
+          buttonStyling={
+            'mb-4 w-max self-center rounded-lg bg-lblue p-3 font-semibold text-[white] shadow-md shadow-dblue hover:bg-dblue hover:shadow-lblue active:bg-dblue active:shadow-none'
+          }
+          isLink={true}
+          text={'Alle Leistungen'}
+          src={'/leistungen'}
+        />
       )}
     </section>
   );
