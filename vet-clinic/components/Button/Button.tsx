@@ -10,15 +10,28 @@ interface IButtonProps {
   text: string;
   src: string;
   isLink: boolean;
+  hoverColor: string;
 }
 
-const Button = ({ buttonStyling, faIcon, text, src, isLink }: IButtonProps) => {
+const Button = ({
+  buttonStyling,
+  faIcon,
+  text,
+  src,
+  isLink,
+  hoverColor: hoverBGColor,
+}: IButtonProps) => {
   return (
     <>
       <motion.button
         className={`${buttonStyling}`}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.99 }}>
+        whileHover={{
+          scale: 1.05,
+          backgroundColor: `${hoverBGColor}`,
+          fontWeight: 'bold',
+        }}
+        whileTap={{ scale: 0.99 }}
+        transition={{ duration: 0.4 }}>
         {faIcon && !isLink && (
           <a href={src} className="flex items-center justify-center gap-2">
             <FontAwesomeIcon className="w-4" icon={faIcon} />
