@@ -24,7 +24,7 @@ const ReadMore = ({
       <AnimatePresence>
         {childrenToShow.map((child, index) => {
           const MotionComponent =
-            React.isValidElement(child) && child.type === 'li'
+            React.isValidElement(child) && child.type === React.Fragment
               ? motion.li
               : motion.div;
           return (

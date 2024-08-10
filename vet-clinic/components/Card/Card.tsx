@@ -4,6 +4,7 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import ReadMore from '../ReadMore/ReadMore';
+import React from 'react';
 
 const commonStylings: { container: string; heading: string } = {
   container:
@@ -24,7 +25,7 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
     <ul className="fa-ul">
       <ReadMore amountShown={3}>
         {items.map((item, index) => (
-          <li key={item + index} className="flex flex-row">
+          <React.Fragment key={item + index}>
             <span className="fa-li">
               <FontAwesomeIcon
                 className="mr-1 mt-[0.2rem] w-[1rem] text-glacier-300"
@@ -32,7 +33,7 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
               />
             </span>
             {item}
-          </li>
+          </React.Fragment>
         ))}
       </ReadMore>
     </ul>
