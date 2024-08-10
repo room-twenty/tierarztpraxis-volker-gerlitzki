@@ -1,7 +1,7 @@
 import Logo from '@/public/images/logo/logo_name.png';
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import Button from '../Button';
+import Button from '../Button/Button';
 
 const TopHeader = () => {
   return (
