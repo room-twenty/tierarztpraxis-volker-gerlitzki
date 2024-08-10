@@ -15,7 +15,10 @@ interface IButtonProps {
 const Button = ({ buttonStyling, faIcon, text, src, isLink }: IButtonProps) => {
   return (
     <>
-      <motion.button className={`${buttonStyling}`}>
+      <motion.button
+        className={`${buttonStyling}`}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.99 }}>
         {faIcon && !isLink && (
           <a href={src} className="flex items-center justify-center gap-2">
             <FontAwesomeIcon className="w-4" icon={faIcon} />
