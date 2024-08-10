@@ -42,9 +42,14 @@ const ReadMore = ({
       {childrenArray.length > amountShown && (
         <motion.p
           onClick={toggleReadMore}
-          whileHover={{ scale: 1.01 }}
+          whileHover={{
+            scale: 1.05,
+            backgroundColor: '#3e77aa',
+            fontWeight: 'bold',
+          }}
           whileTap={{ scale: 0.99 }}
-          className="cursor-pointer font-bold text-steel-blue-500">
+          transition={{ duration: 0.4 }}
+          className="mt-2 w-fit cursor-pointer rounded-md bg-glacier-300 p-1 px-2 tracking-wide text-steel-blue-50">
           {isReadMore ? '...mehr lesen' : '...weniger lesen'}
         </motion.p>
       )}
