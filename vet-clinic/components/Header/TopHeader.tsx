@@ -12,21 +12,23 @@ const TopHeader = () => {
       <div className="flex flex-col gap-3">
         <Button
           buttonStyling={
-            'h-12 w-32 rounded-md bg-pastel-green-400 text-steel-blue-50 shadow-md shadow-pastel-green-500 hover:bg-pastel-green-500 hover:shadow-pastel-green-400 active:bg-pastel-green-500 active:shadow-none'
+            'h-12 w-32 rounded-md bg-pastel-green-400 text-steel-blue-50 shadow-md shadow-pastel-green-500 hover:shadow-pastel-green-400 active:bg-pastel-green-500 active:shadow-none'
           }
           isLink={false}
           faIcon={faPhone}
           text={'Anruf'}
           src={'tel:+49407214244'}
+          hoverColor={'#42b433'}
         />
         <Button
           buttonStyling={
-            'h-12 w-32 rounded-md bg-glacier-300 p-2 text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:bg-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
+            'h-12 w-32 rounded-md bg-glacier-300 p-2 text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
           }
           isLink={false}
           faIcon={faLocationDot}
           text={'Anfahrt'}
           src={'#'}
+          hoverColor={'#3e77aa'}
         />
       </div>
     </header>
