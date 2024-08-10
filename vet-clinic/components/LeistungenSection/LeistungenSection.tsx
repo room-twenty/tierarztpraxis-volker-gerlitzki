@@ -24,11 +24,12 @@ const LeistungenSection = ({
       {!isPathLeistungen && (
         <Button
           buttonStyling={
-            'mb-4 w-max self-center rounded-lg bg-glacier-300 p-3 font-semibold text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:bg-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
+            'mb-4 w-max self-center rounded-lg bg-glacier-300 p-3 font-semibold text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
           }
           isLink={true}
           text={'Alle Leistungen'}
           src={'/leistungen'}
+          hoverColor={'#3e77aa'}
         />
       )}
     </section>
