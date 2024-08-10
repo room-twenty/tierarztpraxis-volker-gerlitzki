@@ -22,7 +22,9 @@ const ReadMore = ({
     <>
       {childrenToShow}
       {childrenArray.length > amountShown && (
-        <span onClick={toggleReadMore} className="cursor-pointer text-dblue">
+        <span
+          onClick={toggleReadMore}
+          className="cursor-pointer text-steel-blue-500">
           <strong>{isReadMore ? '...mehr lesen' : '...weniger lesen'}</strong>
         </span>
       )}

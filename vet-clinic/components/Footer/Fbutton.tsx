@@ -32,10 +32,10 @@ const Fbutton: React.FC<ContactProps> = ({
       <div className="bg-gray-300 p-2">
         <FontAwesomeIcon
           icon={faPaw}
-          className="text-dblue w-12 place-self-center"
+          className="w-12 place-self-center text-steel-blue-500"
         />
       </div>
-      <div className="ml-4 text-white">
+      <div className="ml-4 text-steel-blue-50">
         {contactStreet && (
           <div>
             <p>

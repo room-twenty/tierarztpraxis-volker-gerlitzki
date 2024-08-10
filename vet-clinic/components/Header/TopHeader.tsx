@@ -9,10 +9,10 @@ const TopHeader = () => {
       <div className="">
         <Image src={Logo} alt="Dr. Gerlitki Logo" />
       </div>
-      <div className="">
+      <div className="flex flex-col gap-3">
         <Button
           buttonStyling={
-            'h-12 w-32 rounded-md border-2 bg-green-400 p-2 text-white'
+            'h-12 w-32 rounded-md bg-pastel-green-400 text-steel-blue-50 shadow-md shadow-pastel-green-500 hover:bg-pastel-green-500 hover:shadow-pastel-green-400 active:bg-pastel-green-500 active:shadow-none'
           }
           isLink={false}
           faIcon={faPhone}
@@ -21,7 +21,7 @@ const TopHeader = () => {
         />
         <Button
           buttonStyling={
-            'h-12 w-32 rounded-md border-2 bg-lblue p-2 text-white'
+            'h-12 w-32 rounded-md bg-glacier-300 p-2 text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:bg-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
           }
           isLink={false}
           faIcon={faLocationDot}

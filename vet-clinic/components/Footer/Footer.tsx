@@ -4,7 +4,7 @@ import Fmap from './Fmap';
 
 const Footer = () => {
   return (
-    <section className="bg-blue-950 p-2 pb-10 text-white">
+    <section className="bg-blue-950 p-2 pb-10 text-steel-blue-50">
       {/* use framer motion here for master animation -> roll up from the bot */}
       <Fheader />
       <Fcontact />

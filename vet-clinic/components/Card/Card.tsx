@@ -7,9 +7,9 @@ import ReadMore from '../ReadMore/ReadMore';
 
 const commonStylings: { container: string; heading: string } = {
   container:
-    'm-4 flex flex-col rounded-lg p-4 shadow-md shadow-lblue text-pretty',
+    'm-4 flex flex-col rounded-lg p-4 shadow-md shadow-glacier-300 text-pretty',
   heading:
-    'my-4 text-center text-[1rem] font-semibold text-dblue underline decoration-lblue underline-offset-[7px]',
+    'my-4 text-center text-[1rem] font-semibold text-steel-blue-500 underline decoration-glacier-300 underline-offset-[7px]',
 };
 
 const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
@@ -17,7 +17,7 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
     {faIcon && (
       <FontAwesomeIcon
         icon={faIcon}
-        className="w-12 place-self-center text-dblue"
+        className="w-12 place-self-center text-steel-blue-500"
       />
     )}
     <h2 className={commonStylings.heading}>{title}</h2>
@@ -27,7 +27,7 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
           <li key={item + index} className="flex flex-row">
             <span className="fa-li">
               <FontAwesomeIcon
-                className="mr-1 mt-[0.2rem] w-[1rem] text-lblue"
+                className="mr-1 mt-[0.2rem] w-[1rem] text-glacier-300"
                 icon={faPaw}
               />
             </span>
@@ -46,7 +46,7 @@ const TeamCard = ({ imgSrc, name, infoTexte }: ITeam) => (
       alt={name}
       width={300}
       height={200}
-      className="place-self-center rounded-lg shadow-md shadow-lblue"
+      className="place-self-center rounded-lg shadow-md shadow-glacier-300"
     />
     <h2 className={`${commonStylings.heading}`}>{name}</h2>
     <ReadMore amountShown={1}>

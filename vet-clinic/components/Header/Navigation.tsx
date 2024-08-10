@@ -3,7 +3,7 @@ import NavLink from '../NavLink/NavLink';
 
 const Navigation = () => {
   return (
-    <nav className="flex justify-evenly bg-lblue p-2">
+    <nav className="flex justify-evenly bg-glacier-300 p-2">
       <NavLink href="/">Startseite</NavLink>
       <NavLink href="/#leistungen">Leistungen</NavLink>
       <NavLink href="/#unsere-aerzte">Unsere Ärzte</NavLink>
