@@ -49,7 +49,7 @@ const ReadMore = ({
           }}
           whileTap={{ scale: 0.99 }}
           transition={{ duration: 0.4 }}
-          className="mt-2 w-fit cursor-pointer rounded-md bg-glacier-300 p-1 px-2 tracking-wide text-steel-blue-50">
+          className="mt-2 w-fit cursor-pointer rounded-md bg-glacier-300 px-2 py-1 tracking-wide text-steel-blue-50">
           {isReadMore ? '...mehr lesen' : '...weniger lesen'}
         </motion.p>
       )}
