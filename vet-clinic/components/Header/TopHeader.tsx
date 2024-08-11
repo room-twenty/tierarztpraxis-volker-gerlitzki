@@ -2,12 +2,15 @@ import Logo from '@/public/images/logo/logo_name.png';
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Button from '../Button/Button';
+import Link from 'next/link';
 
 const TopHeader = () => {
   return (
     <header className="flex flex-row place-items-center bg-white p-2">
       <div className="">
-        <Image src={Logo} alt="Dr. Gerlitki Logo" />
+        <Link href={'/'}>
+          <Image src={Logo} alt="Dr. Gerlitki Logo" />
+        </Link>
       </div>
       <div className="flex flex-col gap-3">
         <Button
