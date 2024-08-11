@@ -9,13 +9,13 @@ const ReadMore = ({
   amountShown: number;
   children: React.ReactNode;
 }) => {
-  const [isReadMore, setIsReadMore] = useState(true);
-  const toggleReadMore = () => {
-    setIsReadMore(!isReadMore);
+  const [isNotReadMore, setIsNotReadMore] = useState(true);
+  const toggleReadMore = (toggleState: boolean) => {
+    setIsNotReadMore(toggleState);
   };
 
   const childrenArray = React.Children.toArray(children);
-  const childrenToShow = isReadMore
+  const childrenToShow = isNotReadMore
     ? childrenArray.slice(0, amountShown)
     : childrenArray;
 
@@ -31,6 +31,7 @@ const ReadMore = ({
             <MotionComponent
               className="mb-1"
               key={index}
+              onClick={() => toggleReadMore(true)}
               initial={{ opacity: 0, height: 0, right: -250 }}
               animate={{ opacity: 1, height: 'auto', right: 0 }}
               exit={{ opacity: 0, height: 0, right: -250 }}
@@ -42,7 +43,7 @@ const ReadMore = ({
       </AnimatePresence>
       {childrenArray.length > amountShown && (
         <motion.p
-          onClick={toggleReadMore}
+          onClick={() => toggleReadMore(!isNotReadMore)}
           whileHover={{
             scale: 1.05,
             backgroundColor: '#3e77aa',
@@ -51,7 +52,7 @@ const ReadMore = ({
           whileTap={{ scale: 0.99 }}
           transition={{ duration: 0.4 }}
           className="mt-2 w-fit cursor-pointer rounded-md bg-glacier-300 px-2 py-1 tracking-wide text-steel-blue-50">
-          {isReadMore ? '...mehr lesen' : '...weniger lesen'}
+          {isNotReadMore ? '...mehr lesen' : '...weniger lesen'}
         </motion.p>
       )}
     </>
