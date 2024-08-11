@@ -27,7 +27,7 @@ const Fbutton: React.FC<ContactProps> = ({
   return (
     <div className="flex items-center bg-lblue p-2">
       <div className="flex items-center justify-center bg-dblue p-1">
-        <FontAwesomeIcon icon={faPaw} className="w-11 text-white" />
+        <FontAwesomeIcon icon={faPaw} className="h-11 w-11 text-white" />
       </div>
       <div className="ml-4 flex flex-col justify-center text-white">
         {contactStreet && (
