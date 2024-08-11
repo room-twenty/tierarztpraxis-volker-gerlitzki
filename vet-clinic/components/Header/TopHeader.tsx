@@ -25,12 +25,12 @@ const TopHeader = () => {
         />
         <Button
           buttonStyling={
-            'h-12 w-32 rounded-md bg-glacier-300 p-2 text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
+            'h-12 w-32 rounded-md bg-glacier-300 text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
           }
           isLink={false}
           faIcon={faLocationDot}
           text={'Anfahrt'}
-          src={'#'}
+          src={'#anfahrt'}
           hoverColor={'#3e77aa'}
         />
       </div>
