@@ -50,12 +50,9 @@ const TeamCard = ({ imgSrc, name, infoTexte }: ITeam) => (
       className="place-self-center rounded-lg shadow-md shadow-glacier-300"
     />
     <h2 className={`${commonStylings.heading}`}>{name}</h2>
-    <ul className="fa-ul">
+    <ul className="fa-ul text-justify">
       <ReadMore amountShown={1}>
         {infoTexte.map((infoText, index) => (
-          // <p key={index} className="mb-3">
-          //   {infoText}
-          // </p>
           <React.Fragment key={index}>
             <span className="fa-li">
               <FontAwesomeIcon
