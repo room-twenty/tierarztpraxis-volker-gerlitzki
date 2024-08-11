@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import './globals.css';
+import BackToTop from '@/components/BackToTop/BackToTop';
 
 export const metadata: Metadata = {
   title: 'Tierarztpraxis Volker Gerlitzki',
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
