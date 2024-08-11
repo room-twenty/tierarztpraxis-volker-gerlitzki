@@ -23,7 +23,7 @@ const Button = ({
 }: IButtonProps) => {
   return (
     <>
-      <motion.button
+      <motion.div
         className={`${buttonStyling}`}
         whileHover={{
           scale: 1.05,
@@ -33,13 +33,19 @@ const Button = ({
         whileTap={{ scale: 0.99 }}
         transition={{ duration: 0.4 }}>
         {faIcon && !isLink && (
-          <a href={src} className="flex items-center justify-center gap-2">
+          <a
+            href={src}
+            className="flex h-full w-full items-center justify-center gap-2">
             <FontAwesomeIcon className="h-4 w-4" icon={faIcon} />
             {text}
           </a>
         )}
-        {isLink && <Link href={src}>{text}</Link>}
-      </motion.button>
+        {isLink && (
+          <Link href={src} className="place-self-center p-3">
+            {text}
+          </Link>
+        )}
+      </motion.div>
     </>
   );
 };
