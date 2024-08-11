@@ -29,10 +29,11 @@ const ReadMore = ({
               : motion.div;
           return (
             <MotionComponent
+              className="mb-1"
               key={index}
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, height: 0, right: -250 }}
+              animate={{ opacity: 1, height: 'auto', right: 0 }}
+              exit={{ opacity: 0, height: 0, right: -250 }}
               transition={{ duration: 0.5 }}>
               {child}
             </MotionComponent>
