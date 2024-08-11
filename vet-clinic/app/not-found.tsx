@@ -1,3 +1,7 @@
+export const metadata = {
+  title: '404 - Page Not Found',
+  description: 'Wir konnten die gewünschte Seite leider nicht finden.',
+};
 const NotFound = () => {
   return (
     <>

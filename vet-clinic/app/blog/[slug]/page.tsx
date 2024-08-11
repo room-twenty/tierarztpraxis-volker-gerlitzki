@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Volker's Blog",
+  description: 'Ansammlung Blogeinträge von Dr Volker Gerlitzki',
+};
 const IndividualBlogPage = () => {
   return (
     <>
