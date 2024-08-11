@@ -34,7 +34,7 @@ const Button = ({
         transition={{ duration: 0.4 }}>
         {faIcon && !isLink && (
           <a href={src} className="flex items-center justify-center gap-2">
-            <FontAwesomeIcon className="w-4" icon={faIcon} />
+            <FontAwesomeIcon className="h-4 w-4" icon={faIcon} />
             {text}
           </a>
         )}

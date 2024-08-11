@@ -18,7 +18,7 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
     {faIcon && (
       <FontAwesomeIcon
         icon={faIcon}
-        className="w-12 place-self-center text-steel-blue-500"
+        className="h-12 w-12 place-self-center text-steel-blue-500"
       />
     )}
     <h2 className={commonStylings.heading}>{title}</h2>
@@ -28,7 +28,7 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
           <React.Fragment key={item + index}>
             <span className="fa-li">
               <FontAwesomeIcon
-                className="mr-1 mt-[0.2rem] w-[1rem] text-glacier-300"
+                className="mr-1 mt-[0.2rem] h-4 w-4 text-glacier-300"
                 icon={faPaw}
               />
             </span>
