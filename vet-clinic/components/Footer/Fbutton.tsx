@@ -1,6 +1,3 @@
-// components/Fbutton.tsx
-
-import React from 'react';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -28,38 +25,23 @@ const Fbutton: React.FC<ContactProps> = ({
   contactMail,
 }) => {
   return (
-    <div className="flex bg-gray-600 p-2">
-      <div className="bg-gray-300 p-2">
-        <FontAwesomeIcon
-          icon={faPaw}
-          className="w-12 place-self-center text-steel-blue-500"
-        />
+    <div className="flex items-center bg-lblue p-2">
+      <div className="flex items-center justify-center bg-dblue p-1">
+        <FontAwesomeIcon icon={faPaw} className="w-11 text-white" />
       </div>
-      <div className="ml-4 text-steel-blue-50">
+      <div className="ml-4 flex flex-col justify-center text-white">
         {contactStreet && (
-          <div>
-            <p>
-              {contactStreet.name} {contactStreet.number}
-            </p>
-          </div>
+          <p>
+            {contactStreet.name} {contactStreet.number}
+          </p>
         )}
         {contactCity && (
-          <div>
-            <p>
-              {contactCity.name}, {contactCity.zip}
-            </p>
-          </div>
+          <p>
+            {contactCity.name}, {contactCity.zip}
+          </p>
         )}
-        {contactTel && (
-          <div>
-            <p>Tel: {contactTel}</p>
-          </div>
-        )}
-        {contactMail && (
-          <div>
-            <p>Email: {contactMail}</p>
-          </div>
-        )}
+        {contactTel && <p>{contactTel}</p>}
+        {contactMail && <p>{contactMail}</p>}
       </div>
     </div>
   );
