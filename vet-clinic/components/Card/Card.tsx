@@ -8,7 +8,7 @@ import React from 'react';
 
 const commonStylings: { container: string; heading: string } = {
   container:
-    'm-4 flex flex-col rounded-lg p-4 shadow-md shadow-glacier-300 text-pretty',
+    'm-4 flex flex-col rounded-lg p-4 shadow-md shadow-glacier-300 text-pretty bg-glacier-50',
   heading:
     'my-4 text-center text-[1rem] font-semibold text-steel-blue-500 underline decoration-glacier-300 underline-offset-[7px]',
 };
