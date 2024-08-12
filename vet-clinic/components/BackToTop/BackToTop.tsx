@@ -41,6 +41,11 @@ const BackToTop = () => {
       className="fixed bottom-2 right-2 size-16 rounded-full bg-monza-800 text-4xl text-steel-blue-50"
       variants={ScrollToTopContainerVariants}
       initial="hide"
+      whileHover={{
+        scale: 1.05,
+      }}
+      whileTap={{ scale: 0.99 }}
+      transition={{ duration: 0.4 }}
       animate={controls}
       onClick={scrollToTop}>
       <FontAwesomeIcon icon={faArrowUp} />
