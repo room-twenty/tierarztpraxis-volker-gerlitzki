@@ -12,7 +12,7 @@ const Fopening: React.FC = () => {
   const openingHours: OpeningHours[] = [
     { day: 'Montag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
     { day: 'Dienstag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
-    { day: 'Mittwoch', morning: 'Geschlossen', evening: '16:00 - 19:00' },
+    { day: 'Mittwoch', morning: '10:00 - 12:00', evening: 'Geschlossen' },
     { day: 'Donnerstag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
     { day: 'Freitag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
     { day: 'Samstag', morning: 'Geschlossen', evening: null },
@@ -80,31 +80,30 @@ const Fopening: React.FC = () => {
     return false;
   });
 
-  const statusColor = isOpen ? 'text-green-500' : 'text-red-900';
   const statusText = isOpen ? 'Praxis geöffnet' : 'Praxis geschlossen';
 
   return (
     <div>
       <div
-        className={`flex items-center justify-center bg-red-900 text-xl font-semibold mt-2`}>
+        className={`mt-2 flex items-center justify-center bg-red-900 text-xl font-semibold p-2 mb-5`}>
         <FontAwesomeIcon icon={faClock} className={`mr-2 w-6`} />
         {statusText}
       </div>
-      <div className="grid grid-cols-3 mt-2 p-2">
+      <div className="mt-2 grid grid-cols-3 p-2">
         {openingHours.map(({ day, morning, evening }) => {
           const isCurrentDay = day === currentDay;
           let textColor = '';
 
           if (isCurrentDay) {
             const isOpen = isCurrentTimeWithinOpeningHours(morning, evening);
-            textColor = isOpen ? 'text-green-500' : 'text-red-900';
+            textColor = isOpen ? 'bg-green-500 font-semibold' : 'bg-red-900 font-semibold bg-opacity-3';
           }
 
           return (
-            <div key={day} className="contents">
-              <div className={`font-bold ${textColor}`}>{day}</div>
-              <div className={`font-bold ${textColor}`}>{morning}</div>
-              <div className={`font-bold ${textColor}`}>{evening || ''}</div>
+            <div key={day} className="contents text-xl">
+              <div className={`${textColor}`}>{day}</div>
+              <div className={`${textColor}`}>{morning}</div>
+              <div className={`${textColor}`}>{evening || ''}</div>
             </div>
           );
         })}
