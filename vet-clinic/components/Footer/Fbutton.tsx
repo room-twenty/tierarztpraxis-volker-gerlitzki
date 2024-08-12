@@ -30,10 +30,10 @@ const Fbutton: React.FC<ContactProps> = ({
   contactMail,
 }) => {
   return (
-    <div className="flex items-center bg-lblue p-2">
-      <div className="ml-4 flex flex-col justify-center text-white text-m font-semibold">
+    <div className="flex items-center bg-steel-blue-900 p-2">
+      <div className="ml-4 flex flex-col justify-center text-white text-m">
         {contactStreet && (
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <FontAwesomeIcon icon={faLocationDot} className="mr-5 w-6" />
             <div className="justify-center">
               <p>

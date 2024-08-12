@@ -10,7 +10,7 @@ const contact = {
 
 const Fdata = () => {
   return (
-    <div>
+    <div className='text-l mb-8'>
       <Fbutton contactStreet={contact.street} contactCity={contact.city} />
       <Fbutton contactTel={contact.tel} />
       <Fbutton contactMail={contact.email} />
