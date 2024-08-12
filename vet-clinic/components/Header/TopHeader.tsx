@@ -1,27 +1,39 @@
-import Logo from '../../public/images/logo/logo_name.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Logo from '@/public/images/logo/logo_name.png';
 import { faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Button from '../Button/Button';
+import Link from 'next/link';
 
 const TopHeader = () => {
   return (
-    <header className="border-md items-space-around bg-white flex flex-col place-items-center p-2">
-      <div className="flex w-[100%] flex-row justify-between gap-5">
-        <button className="bg-green-400 text-white h-12 w-32 rounded-md border-2 p-2">
-          <a href="tel:+49407214244" className="flex justify-center gap-2">
-            <FontAwesomeIcon className="w-4" icon={faPhone} />
-            Anruf
-          </a>
-        </button>
-
-        <button className="text-white h-12 w-32 rounded-md border-2 bg-lblue p-2">
-          <a href="#" className="flex justify-center gap-2">
-            <FontAwesomeIcon className="w-4" icon={faLocationDot} />
-            Anfahrt
-          </a>
-        </button>
+    <header className="flex flex-row place-items-center bg-white p-2">
+      <div className="">
+        <Link href={'/'}>
+          <Image src={Logo} alt="Dr. Gerlitki Logo" />
+        </Link>
       </div>
-      <Image className="" src={Logo} alt="Dr. Gerlitki Logo" />
+      <div className="flex flex-col gap-3">
+        <Button
+          buttonStyling={
+            'h-12 w-32 rounded-md bg-pastel-green-400 text-steel-blue-50 shadow-md shadow-pastel-green-500 hover:shadow-pastel-green-400 active:bg-pastel-green-500 active:shadow-none'
+          }
+          isLink={false}
+          faIcon={faPhone}
+          text={'Anruf'}
+          src={'tel:+49407214244'}
+          hoverColor={'#42b433'}
+        />
+        <Button
+          buttonStyling={
+            'h-12 w-32 rounded-md bg-glacier-300 text-steel-blue-50 shadow-md shadow-steel-blue-500 hover:shadow-glacier-300 active:bg-steel-blue-500 active:shadow-none'
+          }
+          isLink={false}
+          faIcon={faLocationDot}
+          text={'Anfahrt'}
+          src={'#anfahrt'}
+          hoverColor={'#3e77aa'}
+        />
+      </div>
     </header>
   );
 };

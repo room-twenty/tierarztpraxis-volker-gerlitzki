@@ -1,9 +1,16 @@
+export const metadata = {
+  title: "Volker's Blog",
+  description: 'Ansammlung Blogeinträge von Dr Volker Gerlitzki',
+};
 const IndividualBlogPage = () => {
-    return (
-        <div>
-            <h2>Ich bin die individuelle Blog Seite</h2>
-        </div>
-    );
+  return (
+    <>
+      <p className="text-[4rem] font-bold text-monza-600">
+        Der Blog befindet sich noch im aufbau! Bitte schauen sie zu einem
+        späteren Zeitpunkt erneut vorbei!
+      </p>
+    </>
+  );
 };
 
 export default IndividualBlogPage;

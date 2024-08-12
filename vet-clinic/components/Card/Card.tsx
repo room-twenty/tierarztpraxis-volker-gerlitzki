@@ -4,12 +4,13 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import ReadMore from '../ReadMore/ReadMore';
+import React from 'react';
 
 const commonStylings: { container: string; heading: string } = {
   container:
-    'm-4 flex flex-col rounded-lg p-4 shadow-md shadow-lblue text-pretty',
+    'm-4 flex flex-col rounded-lg p-4 shadow-md shadow-glacier-300 text-pretty bg-glacier-50',
   heading:
-    'my-4 text-center text-[1rem] font-semibold text-dblue underline decoration-lblue underline-offset-[7px]',
+    'my-4 text-center text-[1rem] font-semibold text-steel-blue-500 underline decoration-glacier-300 underline-offset-[7px]',
 };
 
 const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
@@ -17,22 +18,22 @@ const LeistungenCard = ({ title, items, faIcon }: ILeistungen) => (
     {faIcon && (
       <FontAwesomeIcon
         icon={faIcon}
-        className="w-12 place-self-center text-dblue"
+        className="h-12 w-12 place-self-center text-steel-blue-500"
       />
     )}
     <h2 className={commonStylings.heading}>{title}</h2>
     <ul className="fa-ul">
       <ReadMore amountShown={3}>
         {items.map((item, index) => (
-          <li key={item + index} className="flex flex-row">
+          <React.Fragment key={item + index}>
             <span className="fa-li">
               <FontAwesomeIcon
-                className="mr-1 mt-[0.2rem] w-[1rem] text-lblue"
+                className="mr-1 mt-[0.2rem] h-4 w-4 text-glacier-300"
                 icon={faPaw}
               />
             </span>
             {item}
-          </li>
+          </React.Fragment>
         ))}
       </ReadMore>
     </ul>
@@ -46,16 +47,24 @@ const TeamCard = ({ imgSrc, name, infoTexte }: ITeam) => (
       alt={name}
       width={300}
       height={200}
-      className="place-self-center rounded-lg shadow-md shadow-lblue"
+      className="place-self-center rounded-lg shadow-md shadow-glacier-300"
     />
     <h2 className={`${commonStylings.heading}`}>{name}</h2>
-    <ReadMore amountShown={1}>
-      {infoTexte.map((infoText, index) => (
-        <p key={index} className="mb-3">
-          {infoText}
-        </p>
-      ))}
-    </ReadMore>
+    <ul className="fa-ul text-justify">
+      <ReadMore amountShown={1}>
+        {infoTexte.map((infoText, index) => (
+          <React.Fragment key={index}>
+            <span className="fa-li">
+              <FontAwesomeIcon
+                className="mr-1 mt-[0.2rem] h-4 w-4 text-glacier-300"
+                icon={faPaw}
+              />
+            </span>
+            {infoText}
+          </React.Fragment>
+        ))}
+      </ReadMore>
+    </ul>
   </div>
 );
 
