@@ -1,4 +1,9 @@
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faLocationDot,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface Street {
@@ -26,22 +31,32 @@ const Fbutton: React.FC<ContactProps> = ({
 }) => {
   return (
     <div className="flex items-center bg-lblue p-2">
-      <div className="flex items-center justify-center bg-dblue p-1">
-        <FontAwesomeIcon icon={faPaw} className="w-11 text-white" />
-      </div>
-      <div className="ml-4 flex flex-col justify-center text-white">
+      <div className="ml-4 flex flex-col justify-center text-white text-m font-semibold">
         {contactStreet && (
-          <p>
-            {contactStreet.name} {contactStreet.number}
-          </p>
+          <div className="flex items-center ">
+            <FontAwesomeIcon icon={faLocationDot} className="mr-5 w-6" />
+            <div className="justify-center">
+              <p>
+                {contactStreet.name} {contactStreet.number}
+              </p>
+              <p>
+                {contactCity.name} {contactCity.zip}
+              </p>
+            </div>
+          </div>
         )}
-        {contactCity && (
-          <p>
-            {contactCity.name}, {contactCity.zip}
-          </p>
+        {contactTel && (
+          <div className="flex items-center">
+            <FontAwesomeIcon icon={faPhone} className="mr-5 w-6" />
+            <p>{contactTel}</p>
+          </div>
         )}
-        {contactTel && <p>{contactTel}</p>}
-        {contactMail && <p>{contactMail}</p>}
+        {contactMail && (
+          <div className="flex items-center">
+            <FontAwesomeIcon icon={faEnvelope} className="mr-5 w-6" />
+            <p>{contactMail}</p>
+          </div>
+        )}
       </div>
     </div>
   );
