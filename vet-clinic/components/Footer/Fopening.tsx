@@ -15,8 +15,6 @@ const Fopening: React.FC = () => {
     { day: 'Mittwoch', morning: '10:00 - 12:00', evening: 'Geschlossen' },
     { day: 'Donnerstag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
     { day: 'Freitag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
-    { day: 'Samstag', morning: 'Geschlossen', evening: null },
-    { day: 'Sonntag', morning: 'Geschlossen', evening: null },
   ];
 
   const getCurrentDay = (): string => {
