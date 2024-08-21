@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Heroimage from '@/public/images/various/border-collie-8501579_1280.jpg';
 
-const HeroscetionCarousel = ( {images} ) => {
+const HeroscetionCarousel = ( images: string[] ) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -15,7 +15,7 @@ const HeroscetionCarousel = ( {images} ) => {
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex,
     );
   };
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: number) => {
     setCurrentIndex(index);
   };
   return (
