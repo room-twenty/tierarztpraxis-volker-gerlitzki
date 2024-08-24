@@ -7,12 +7,12 @@ export default function Home() {
     <>
       {/* <h1>Ich bin die Startseite</h1> */}
       <HeroSection />
-      <LeistungenSection
+      {/* <LeistungenSection
         sliceAmount={[0, 3]}
         currentPath="/"
         styling="flex flex-col"
       />
-      <DocTeamSection />
+      <DocTeamSection /> */}
     </>
   );
 }
