@@ -1,5 +1,7 @@
+import TiereInfoPageSection from '@/components/TiereSection/TiereInfoPageSection';
+
 const TierInfoPage = () => {
-  return <div></div>;
+  return <TiereInfoPageSection />;
 };
 
 export default TierInfoPage;

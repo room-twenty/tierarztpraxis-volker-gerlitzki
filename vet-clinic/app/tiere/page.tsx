@@ -1,5 +1,7 @@
+import TiereMainSection from '@/components/TiereSection/TiereMainPageSection';
+
 const TiereMainPage = () => {
-  return <div></div>;
+  return <TiereMainSection />;
 };
 
 export default TiereMainPage;
