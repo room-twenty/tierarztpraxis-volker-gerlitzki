@@ -1,23 +1,25 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client';
+import { useActivePath } from '@/app/helper';
+import Link from 'next/link';
 
 interface NavLinkProps {
-    href: string;
-    children: React.ReactNode;
+  href: string;
+  children: React.ReactNode;
 }
 
 const NavLink = ({ href, children }: NavLinkProps) => {
-    const path = usePathname();
-
-    return (
-        <Link
-            href={href}
-            className={path.startsWith(href) ? "active link" : "link"}
-        >
-            {children}
-        </Link>
-    );
+  const isActive = useActivePath();
+  return (
+    <Link
+      href={href}
+      className={
+        isActive(href)
+          ? 'scale-110 font-semibold text-steel-blue-50 underline underline-offset-[4px] duration-500 ease-in-out'
+          : 'font-normal text-steel-blue-50 duration-500 ease-in-out hover:scale-110 hover:font-semibold hover:underline hover:underline-offset-[4px]'
+      }>
+      {children}
+    </Link>
+  );
 };
 
 export default NavLink;
