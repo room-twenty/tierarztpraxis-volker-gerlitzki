@@ -14,8 +14,8 @@ const NavLink = ({ href, children }: NavLinkProps) => {
       href={href}
       className={
         isActive(href)
-          ? 'scale-110 font-semibold text-steel-blue-50 underline underline-offset-[4px] duration-500 ease-in-out'
-          : 'font-normal text-steel-blue-50 duration-500 ease-in-out hover:scale-110 hover:font-semibold hover:underline hover:underline-offset-[4px]'
+          ? 'scale-110 font-semibold text-steel-blue-50 underline underline-offset-4 duration-500 ease-in-out'
+          : 'font-normal text-steel-blue-50 duration-500 ease-in-out hover:scale-110 hover:font-semibold hover:underline hover:underline-offset-4'
       }>
       {children}
     </Link>
