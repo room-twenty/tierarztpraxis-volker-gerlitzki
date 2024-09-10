@@ -113,7 +113,10 @@ const Fopening: React.FC = () => {
   const statusText = isOpen ? 'Praxis geöffnet' : 'Praxis geschlossen';
   const statusTextColor = isOpen ? 'text-green-700' : 'text-red-700';
   return (
-    <div>
+    <section className="pb-5 text-base">
+      <h2 className="text-2xl font-semibold text-glacier-600">
+        Unsere Öffnungzeiten
+      </h2>
       <div className={statusTextColor}>
         <FontAwesomeIcon icon={faClock} className={`mr-2 w-6`} />
         {statusText}
@@ -143,7 +146,7 @@ const Fopening: React.FC = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
