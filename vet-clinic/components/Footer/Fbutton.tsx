@@ -31,7 +31,7 @@ const Fbutton: React.FC<ContactProps> = ({
 }) => {
   return (
     <div className="flex items-center bg-steel-blue-900 p-2">
-      <div className="ml-4 flex flex-col justify-center text-white text-m">
+      <div className="text-m ml-4 flex flex-col justify-center text-white">
         {contactStreet && (
           <div className="flex items-center">
             <FontAwesomeIcon icon={faLocationDot} className="mr-5 w-6" />
