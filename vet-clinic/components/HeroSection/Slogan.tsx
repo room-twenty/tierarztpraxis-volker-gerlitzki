@@ -2,8 +2,13 @@ import React from 'react';
 
 const Slogan = () => {
   return (
-    <div className="absolute text-[2rem]">
-      <h2 className=" rounded-lg bg-slate-200/75 p-2">Slogan</h2>
+    <div className="bg-slate-100/90 p-2 text-center">
+      <h2 className="mb-3 text-2xl font-semibold text-glacier-900">
+        Gerlitzki
+      </h2>
+      <p className="text-base">
+        Tierarztpraxis in Hamburg - für Hunde, Katzen und kleine Heimtiere
+      </p>
     </div>
   );
 };

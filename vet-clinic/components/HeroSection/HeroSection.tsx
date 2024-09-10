@@ -5,7 +5,7 @@ import Image from 'next/image';
 const HeroSection = () => {
   return (
     <div className="relative h-[30rem] max-h-[310px] bg-cover bg-center" style={{ backgroundImage: `url(${Heroimage.src})` }}>
-      <div className="absolute inset-0 flex items-end justify-center pb-4">
+      <div className="absolute inset-0 flex items-end justify-center p-3">
         <Slogan />
       </div>
     </div>
