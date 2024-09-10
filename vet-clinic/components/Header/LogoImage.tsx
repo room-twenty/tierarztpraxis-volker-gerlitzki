@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 const LogoImage = () => {
   return (
-    <div className="">
+    <div className="relative z-20">
       <Image
         alt="Logo"
         src={Logo}
-        className="tralate-y-3 h-[95px] w-[90px] rounded-xl translate-y-7"
+        className="tralate-y-3 h-[95px] w-[90px] translate-y-7 rounded-xl"
       />
     </div>
   );
