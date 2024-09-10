@@ -5,9 +5,7 @@ import Fmap from './Fmap';
 const Footer = () => {
   return (
     <section id="anfahrt" className="bg-steel-blue-800 p-2 pb-10 text-white mt-20">
-      {/* <Fheader />
-      <Fcontact />
-      <Fmap /> */}
+      <Fmap /> 
     </section>
   );
 };
