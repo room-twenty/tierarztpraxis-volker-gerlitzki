@@ -1,12 +1,13 @@
-import Navigation from './Navigation';
+import Navigation2 from './Navigation2';
 import TopHeader from './TopHeader';
 
 const Header = () => {
   return (
-    <>
-      <TopHeader />
-      <Navigation />
-    </>
+    <header>
+      <Navigation2/>
+       {/* <TopHeader /> */}
+      {/*<Navigation /> */}
+    </header>
   );
 };
 

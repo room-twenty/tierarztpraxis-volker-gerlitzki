@@ -9,7 +9,7 @@ const TopHeader = () => {
   return (
     <>
       <TopContactBar />
-      <header className="flex flex-row place-items-center bg-white p-2">
+      <div className="flex flex-row place-items-center bg-white p-2">
         <div className="">
           <Link href={'/'}>
             <Image src={Logo} alt="Dr. Gerlitki Logo" />
@@ -37,7 +37,7 @@ const TopHeader = () => {
             hoverColor={'#3e77aa'}
             />
             </div> */}
-      </header>
+      </div>
     </>
   );
 };
