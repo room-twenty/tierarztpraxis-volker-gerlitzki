@@ -33,7 +33,7 @@ const ClinicPhilosophy = () => {
           erläutern, damit Sie die Situation ihres Tieres verstehen und zu
           seiner möglichst schnellen Genesung beitragen können.
         </p>
-        <p className="font-bold text-glacier-900">Ihr Dr. Volker Gerlitzki</p>
+        <p className="font-bold text-glacier-900 mb-5">Ihr Dr. Volker Gerlitzki</p>
       </article>
     </section>
   );

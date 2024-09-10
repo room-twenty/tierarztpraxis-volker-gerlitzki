@@ -4,17 +4,37 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 interface OpeningHours {
   day: string;
-  morning: string;
-  evening: string | null;
+  morning: { start: string; end: string } | null;
+  evening: { start: string; end: string } | null;
 }
 
 const Fopening: React.FC = () => {
   const openingHours: OpeningHours[] = [
-    { day: 'Montag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
-    { day: 'Dienstag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
-    { day: 'Mittwoch', morning: '10:00 - 12:00', evening: 'Geschlossen' },
-    { day: 'Donnerstag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
-    { day: 'Freitag', morning: '10:00 - 12:00', evening: '16:00 - 19:00' },
+    {
+      day: 'Montag',
+      morning: { start: '10:00', end: '12:00' },
+      evening: { start: '16:00', end: '19:00' },
+    },
+    {
+      day: 'Dienstag',
+      morning: { start: '10:00', end: '12:00' },
+      evening: { start: '16:00', end: '19:00' },
+    },
+    {
+      day: 'Mittwoch',
+      morning: { start: '10:00', end: '12:00' },
+      evening: null,
+    },
+    {
+      day: 'Donnerstag',
+      morning: { start: '10:00', end: '12:00' },
+      evening: { start: '16:00', end: '19:00' },
+    },
+    {
+      day: 'Freitag',
+      morning: { start: '10:00', end: '12:00' },
+      evening: { start: '16:00', end: '19:00' },
+    },
   ];
 
   const getCurrentDay = (): string => {
@@ -32,8 +52,8 @@ const Fopening: React.FC = () => {
   };
 
   const isCurrentTimeWithinOpeningHours = (
-    morning: string,
-    evening: string | null,
+    morning: { start: string; end: string } | null,
+    evening: { start: string; end: string } | null,
   ): boolean => {
     const currentTime = new Date();
     const [currentHour, currentMinute] = [
@@ -57,17 +77,29 @@ const Fopening: React.FC = () => {
       return currentTime >= startTime && currentTime <= endTime;
     };
 
-    if (morning !== 'Geschlossen') {
-      const [morningStart, morningEnd] = morning.split(' - ');
+    if (morning) {
+      const { start: morningStart, end: morningEnd } = morning;
       if (isWithinTimeRange(morningStart, morningEnd)) return true;
     }
 
-    if (evening && evening !== 'Geschlossen') {
-      const [eveningStart, eveningEnd] = evening.split(' - ');
+    if (evening) {
+      const { start: eveningStart, end: eveningEnd } = evening;
       if (isWithinTimeRange(eveningStart, eveningEnd)) return true;
     }
 
     return false;
+  };
+
+  const formatTime = (time: string) => {
+    // Entfernt ':00' aus der Uhrzeit
+    return time.endsWith(':00') ? time.slice(0, -3) : time;
+  };
+
+  const formatOpeningHours = (
+    period: { start: string; end: string } | null,
+  ) => {
+    if (!period) return 'Geschlossen';
+    return `${formatTime(period.start)} - ${formatTime(period.end)} Uhr`;
   };
 
   const currentDay = getCurrentDay();
@@ -79,11 +111,10 @@ const Fopening: React.FC = () => {
   });
 
   const statusText = isOpen ? 'Praxis geöffnet' : 'Praxis geschlossen';
-
+  const statusTextColor = isOpen ? 'text-green-700' : 'text-red-700';
   return (
     <div>
-      <div
-        className={`mt-2 flex items-center justify-center bg-red-900 text-xl font-semibold p-2 mb-5`}>
+      <div className={statusTextColor}>
         <FontAwesomeIcon icon={faClock} className={`mr-2 w-6`} />
         {statusText}
       </div>
@@ -94,14 +125,20 @@ const Fopening: React.FC = () => {
 
           if (isCurrentDay) {
             const isOpen = isCurrentTimeWithinOpeningHours(morning, evening);
-            textColor = isOpen ? 'bg-green-500 font-semibold' : 'bg-red-900 font-semibold bg-opacity-3';
+            textColor = isOpen
+              ? 'text-green-700 font-semibold'
+              : 'text-red-700 font-semibold';
           }
 
           return (
-            <div key={day} className="contents text-xl">
+            <div key={day} className="contents">
               <div className={`${textColor}`}>{day}</div>
-              <div className={`${textColor}`}>{morning}</div>
-              <div className={`${textColor}`}>{evening || ''}</div>
+              <div className={`${textColor}`}>
+                {formatOpeningHours(morning)}
+              </div>
+              <div className={`${textColor}`}>
+                {formatOpeningHours(evening)}
+              </div>
             </div>
           );
         })}
