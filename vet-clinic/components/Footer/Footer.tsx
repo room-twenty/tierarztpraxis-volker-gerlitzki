@@ -4,8 +4,7 @@ const Footer = () => {
   return (
     <section
       id="anfahrt"
-      className="mt-20 bg-steel-blue-800 p-2 pb-10 text-white">
-      <Fmap />
+      className="mt-20 bg-glacier-50 p-2 pb-10 text-white">
     </section>
   );
 };

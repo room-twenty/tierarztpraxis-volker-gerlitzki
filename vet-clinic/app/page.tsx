@@ -3,6 +3,7 @@ import DocTeamSection from '@/components/DocTeamSection/DocTeamSection';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import ClinicPhilosophy from '@/components/ClinicPhilosophy/ClinicPhilosophy';
 import Contact from '@/components/Contact/Contact';
+import Location from '@/components/Location/Location';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <ClinicPhilosophy />
       <Contact />
+      <Location/>
       {/* <LeistungenSection
         sliceAmount={[0, 3]}
         currentPath="/"

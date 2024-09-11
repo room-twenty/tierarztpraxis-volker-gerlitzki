@@ -24,7 +24,7 @@ export default function RootLayout({
     <html style={{ scrollBehavior: 'smooth' }} lang="de">
       <body className={montserrat.className}>
         <Header />
-        <main className="">{children}</main>
+        <main>{children}</main>
         <Footer />
         <BackToTop />
       </body>
