@@ -1,4 +1,4 @@
-import DogoramaWidget from "./DogoramaWidget";
+import DogoramaWidget from './DogoramaWidget';
 
 const navItems = [
   { href: '/', text: 'Startseite' },
@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
         ))}
       </nav>
-      <DogoramaWidget/>
+      <DogoramaWidget />
     </footer>
   );
 };
