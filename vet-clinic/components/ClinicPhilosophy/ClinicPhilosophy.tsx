@@ -22,10 +22,6 @@ const ClinicPhilosophy = () => {
           und liebevollen Umgang.
         </p>
         <p className="text-justify">
-          Ebenfalls legen wir großen Wert auf einen breiten therapeutischen
-          Ansatz. Dazu gehören für uns auch naturheilkundliche Verfahren.
-        </p>
-        <p className="text-justify">
           Und auch Sie selbst sind nicht irgendein Kunde sondern als Besitzer
           und Freund ihres Tieres unser Partner für seine Gesundheit. Daher
           nehmen wir uns die Zeit, Ihnen Krankheitsbild, -ursachen und -verlauf

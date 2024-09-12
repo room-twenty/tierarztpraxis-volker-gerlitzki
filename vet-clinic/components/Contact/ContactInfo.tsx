@@ -14,10 +14,10 @@ const ContactData = () => {
             d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
       </div>
-      <div className="w-[100%] border-2 bg-glacier-50 p-3">
+      <div className="border-2 bg-glacier-50 p-3">
         <p>
           Um eine entspannte Atmosphäre und kurze Wartezeiten sicherzustellen,
-          bitten wir Sie, Ihren Termin vorab{' '}
+          bitten wir Sie, Ihren Termin vorab
           <span className="font-semibold"> telefonisch</span> zu vereinbaren.
         </p>
       </div>
