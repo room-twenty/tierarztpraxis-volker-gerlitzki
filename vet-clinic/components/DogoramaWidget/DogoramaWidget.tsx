@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
 
 interface Hazard {
   id: string;
@@ -29,8 +31,6 @@ const DogoramaWidget = () => {
         );
         const data = await response.json();
         setHazards(data.hazards);
-        console.log(data);
-        
       } catch (error) {
         setError(true);
       }
@@ -40,17 +40,22 @@ const DogoramaWidget = () => {
   }, []);
 
   return (
-    <div className="dogorama-container m-5 flex flex-col">
+    <div className="dogorama-container mx-5 mb-5 flex flex-col">
       {error && <p className="text-red-500">Fehler beim Laden der Daten</p>}
-      <div className="hazards-list flex flex-col justify-between gap-3">
-        {hazards.slice(0, 6).map((hazard) => (
+      <Carousel
+        showThumbs={false}
+        infiniteLoop
+        autoPlay
+        interval={5000}
+        showStatus={false}>
+        {hazards.map((hazard) => (
           <a
             href={`https://dogorama.app/gefahrenmeldungen/${encodeURIComponent(
               hazard.city,
             )}/${encodeURIComponent(hazard.name)}-${hazard.id}/`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hazard-item flex flex-col items-center rounded-lg bg-white p-8 text-center text-black shadow-md"
+            className="hazard-item mb-3 flex h-32 flex-col items-center bg-white p-8 text-center text-black shadow-md"
             key={hazard.id}>
             <div className="hazard-info">
               <div
@@ -61,7 +66,7 @@ const DogoramaWidget = () => {
                   )}')`,
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'left center',
-                  backgroundSize: '1.5rem 1.5rem', // Adjust the size of the icon
+                  backgroundSize: '1.5rem 1.5rem',
                   paddingLeft: '2rem',
                 }}>
                 {hazard.name}
@@ -77,6 +82,26 @@ const DogoramaWidget = () => {
             </div>
           </a>
         ))}
+      </Carousel>
+      {/* Carousel */}
+      <div className="mt-4 text-center text-gray-500">
+        Powered by{' '}
+        <a
+          href="https://dogorama.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500">
+          dogorama
+        </a>
+      </div>
+      <div className="mt-5 text-center">
+        <a
+          href="https://dogorama.app/de-de/giftkoeder/Hamburg/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded bg-[#256d27] px-6 py-3 text-white hover:bg-blue-700">
+          Alle Giftködermeldungen anzeigen
+        </a>
       </div>
     </div>
   );
