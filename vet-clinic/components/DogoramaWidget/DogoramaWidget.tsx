@@ -40,7 +40,7 @@ const DogoramaWidget = () => {
   }, []);
 
   return (
-    <div className="dogorama-container mx-5 mb-5 flex flex-col">
+    <div className="dogorama-container mx-5 flex flex-col">
       {error && <p className="text-red-500">Fehler beim Laden der Daten</p>}
       <Carousel
         showThumbs={false}
@@ -55,7 +55,7 @@ const DogoramaWidget = () => {
             )}/${encodeURIComponent(hazard.name)}-${hazard.id}/`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hazard-item mb-3 flex h-32 flex-col items-center bg-white p-8 text-center text-black shadow-md"
+            className="hazard-item mb-10 flex h-32 flex-col items-center bg-white p-8 text-center text-black shadow-md"
             key={hazard.id}>
             <div className="hazard-info">
               <div
