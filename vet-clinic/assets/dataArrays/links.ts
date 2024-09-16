@@ -6,12 +6,11 @@ export interface ILink {
 export const links: ILink[] = [
   {
     href: 'https://www.dght.de/startseite',
-    text:
-      'Deutschen Gesellschaft für Herpetologie und Terrarienkunde (DGHT)',
+    text: 'Deutschen Gesellschaft für Herpetologie und Terrarienkunde',
   },
   {
     href: 'https://www.bundestieraerztekammer.de/tieraerzte/beruf/got/',
-    text: 'Gebührenordnung für Tierärzte (GOT)',
+    text: 'Gebührenordnung für Tierärzte',
   },
   {
     href: 'http://www.terrarien-freunde-hamburg.de/',
