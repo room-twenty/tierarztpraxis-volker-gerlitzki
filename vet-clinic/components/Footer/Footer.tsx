@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gl footer scroll-pb-9 bg-[#E7E7E7] px-2 pt-11 text-neutral-content">
+    <footer className="bg-gl footer scroll-pb-9 bg-[#E7E7E7] px-2 py-11 text-neutral-content">
       <h4 className="text-[1rem] font-semibold text-glacier-950">
         Tierarztpraxis Gerlitzki: Danke für Ihren Besuch
       </h4>
