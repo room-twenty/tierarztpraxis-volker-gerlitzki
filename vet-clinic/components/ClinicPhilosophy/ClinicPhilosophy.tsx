@@ -4,10 +4,15 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 const ClinicPhilosophy = () => {
   return (
     <section className="flex flex-col pb-[10px] pt-[50px]">
-      <article className="flex flex-col gap-y-4 px-[10px] text-sm leading-[1.2rem]">
-        <div className="mb-6 text-center text-sm font-semibold text-glacier-900">
+      <article className="flex flex-col gap-y-4 px-[10px] text-[15px] leading-[1.2rem]">
+        <div className="mb-6 text-center text-base font-semibold text-glacier-900">
           <h4>
-            Aus <FontAwesomeIcon className='text-red-500 text-base' icon={faHeart} /> zum Tier 
+            Aus{' '}
+            <FontAwesomeIcon
+              className="text-base text-red-500"
+              icon={faHeart}
+            />{' '}
+            zum Tier
           </h4>
           <h5>
             Überdurchschnittliches medizinisches Niveau, ohne unnötige
@@ -29,7 +34,9 @@ const ClinicPhilosophy = () => {
           erläutern, damit Sie die Situation ihres Tieres verstehen und zu
           seiner möglichst schnellen Genesung beitragen können.
         </p>
-        <p className="font-bold text-glacier-900 mb-5">Ihr Dr. Volker Gerlitzki</p>
+        <p className="mb-5 text-base font-bold text-glacier-900">
+          Ihr Dr. Volker Gerlitzki
+        </p>
       </article>
     </section>
   );
