@@ -12,13 +12,6 @@ const HamburgerMenu = () => {
     ) as HTMLInputElement;
     if (drawerCheckbox) {
       drawerCheckbox.checked = !drawerCheckbox.checked;
-
-      // Tailwind's overflow-hidden class on body to prevent scrolling
-      if (drawerCheckbox.checked) {
-        document.body.classList.add('overflow-hidden');
-      } else {
-        document.body.classList.remove('overflow-hidden');
-      }
     }
   };
 
