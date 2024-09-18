@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
+
 const ContactMenu = () => {
   return (
     <div className="drawer drawer-end w-auto">
