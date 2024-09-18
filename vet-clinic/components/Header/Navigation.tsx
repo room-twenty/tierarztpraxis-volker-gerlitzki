@@ -1,12 +1,5 @@
 import NavLink from '@/components/NavLink/NavLink';
-
-const navItems = [
-  { href: '/', text: 'Startseite' },
-  { href: '/tiere', text: 'Tiere' },
-  { href: '/aerzte', text: 'Unsere Ärzte' },
-  { href: '/leistungen', text: 'Alle Leistungen' },
-  { href: '/blog', text: 'Blog' },
-];
+import { navItems } from '../../assets/dataArrays/links';
 
 const Navigation = () => {
   return (

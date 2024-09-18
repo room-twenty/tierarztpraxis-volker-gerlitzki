@@ -1,18 +1,9 @@
-import { links, ILink } from '../../assets/dataArrays/links';
-
-const navItems: ILink[] = [
-  { href: '/', text: 'Startseite' },
-  { href: '/tiere', text: 'Tiere' },
-  { href: '/aerzte', text: 'Unsere Ärzte' },
-  { href: '/leistungen', text: 'Alle Leistungen' },
-  { href: '/blog', text: 'Blog' },
-];
-
-const protectedLinks: ILink[] = [
-  { href: '/cookies', text: 'Cookies' },
-  { href: '/impressum', text: 'Impressum' },
-  { href: '/datenschutz', text: 'Datenschutz' },
-];
+import {
+  links,
+  ILink,
+  navItems,
+  protectedLinks,
+} from '../../assets/dataArrays/links';
 
 const Footer: React.FC = () => {
   const combinedLinks: { title: string; items: ILink[] }[] = [

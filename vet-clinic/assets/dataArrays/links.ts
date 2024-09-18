@@ -33,3 +33,17 @@ export const links: ILink[] = [
     text: 'Comfortplan Tierversicherungsvergleich',
   },
 ];
+
+export const protectedLinks: ILink[] = [
+  { href: '/cookies', text: 'Cookies' },
+  { href: '/impressum', text: 'Impressum' },
+  { href: '/datenschutz', text: 'Datenschutz' },
+];
+
+export const navItems: ILink[] = [
+  { href: '/', text: 'Startseite' },
+  { href: '/tiere', text: 'Tiere' },
+  { href: '/aerzte', text: 'Unsere Ärzte' },
+  { href: '/leistungen', text: 'Alle Leistungen' },
+  { href: '/blog', text: 'Blog' },
+];
