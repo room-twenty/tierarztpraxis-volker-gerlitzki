@@ -1,5 +1,5 @@
-import Navigation2 from './Navigation2';
-import TopHeader from './TopHeader';
+import Navigation2 from './header_components/Navigation2';
+// import TopHeader from './TopHeader';
 
 const Header = () => {
   return (

@@ -1,14 +1,34 @@
 'use client';
 
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { navItems } from '@/assets/dataArrays/links';
-import NavLink from '@/components/NavLink/NavLink';
+import React from 'react';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
-const HamburgerMenu = () => {
+interface DrawerMenuProps {
+  drawerId: string;
+  icon: IconDefinition;
+  title: string;
+  items: {
+    href?: string;
+    text: string;
+    icon?: IconDefinition;
+    isImportant?: boolean;
+  }[];
+  position?: 'left' | 'right';
+  contentClassName?: string;
+}
+
+const DrawerMenu: React.FC<DrawerMenuProps> = ({
+  drawerId,
+  icon,
+  title,
+  items,
+  position = 'left',
+  contentClassName = '',
+}) => {
   const toggleDrawer = () => {
     const drawerCheckbox = document.getElementById(
-      'my-drawer',
+      drawerId,
     ) as HTMLInputElement;
     if (drawerCheckbox) {
       drawerCheckbox.checked = !drawerCheckbox.checked;
@@ -16,20 +36,22 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className="drawer h-max w-auto">
-      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-      <label htmlFor="my-drawer">
-        <FontAwesomeIcon className="p-6 text-3xl text-white" icon={faBars} />
+    <div
+      className={`drawer ${position === 'right' ? 'drawer-end' : ''} w-auto`}>
+      <input id={drawerId} type="checkbox" className="drawer-toggle" />
+      <label htmlFor={drawerId}>
+        <FontAwesomeIcon icon={icon} className="p-6 text-3xl" />
       </label>
       <div className="drawer-side z-50">
         <label
-          htmlFor="my-drawer"
+          htmlFor={drawerId}
           aria-label="close sidebar"
           className="drawer-overlay"></label>
-        {/* Content */}{' '}
+        {/* Content */}
         <div className="menu min-h-full w-96 bg-[#e7e7e7] p-0 text-base-content">
           <div className="bg-base-200">
-            <div className="flex flex-row-reverse p-2">
+            <div
+              className={`flex ${position === 'right' ? 'justify-start' : 'justify-end'} p-2`}>
               <button
                 onClick={toggleDrawer}
                 className="btn btn-circle border-none shadow-none">
@@ -50,22 +72,29 @@ const HamburgerMenu = () => {
             </div>
             <div className="flex justify-center text-xl">
               <h2 className="mb-2 border-b-2 border-glacier-600 p-1 px-8 text-glacier-600">
-                MENU
+                {title}
               </h2>
             </div>
             <div
-              className="flex flex-col px-5 py-8 text-lg leading-10 text-glacier-600"
+              className={`flex flex-col px-5 py-8 text-lg leading-10 text-glacier-600 ${contentClassName}`}
               style={{
                 boxShadow:
                   '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
               }}>
-              {navItems.map((item) => (
-                <NavLink
+              {items.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
                   onClick={toggleDrawer}
-                  key={item.href}
-                  href={item.href}>
+                  className={`w-full py-2 font-normal duration-500 ease-in-out ${item.isImportant ? 'text-red-600' : ''}`}>
                   {item.text}
-                </NavLink>
+                  {item.icon && (
+                    <div
+                      className={`btn ml-4 text-xl ${item.isImportant ? 'bg-red-600' : 'bg-glacier-600'} text-base-200`}>
+                      <FontAwesomeIcon icon={item.icon} />
+                    </div>
+                  )}
+                </a>
               ))}
             </div>
           </div>
@@ -75,4 +104,4 @@ const HamburgerMenu = () => {
   );
 };
 
-export default HamburgerMenu;
+export default DrawerMenu;
