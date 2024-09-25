@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Slogan = () => {
   return (
     <div className="bg-slate-100/90 p-2 text-center">

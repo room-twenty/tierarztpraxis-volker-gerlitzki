@@ -1,12 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faInfoCircle,
-  faPhoneAlt,
-  faHome,
-} from '@fortawesome/free-solid-svg-icons';
 import ContactInfo from './ContactInfo';
 import ContactEmergency from './ContactEmergency';
 import ContactVisit from './ContactVisit';
@@ -38,16 +32,22 @@ const ContactInfoMenu: React.FC = () => {
 
   return (
     <div className="text-md w-full border-2">
+      {/* Tab Navigation */}
       <div className="flex font-semibold">
         {tabs.map((tab, index) => (
           <button
             key={index}
-            className={`flex-1 py-2 ${activeTab === index ? `tab-active ${tab.bgColorActive}` : tab.bgColorInactive}`}
+            className={`flex-1 py-2 ${
+              activeTab === index
+                ? `tab-active ${tab.bgColorActive}`
+                : tab.bgColorInactive
+            }`}
             onClick={() => handleTabClick(index)}>
             {tab.label}
           </button>
         ))}
       </div>
+
       {/* Tab Content */}
       <div className="mt-4">
         {activeTab === 0 && <ContactInfo />}

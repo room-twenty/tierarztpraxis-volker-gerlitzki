@@ -4,7 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { navItems } from '@/assets/dataArrays/links';
 import DrawerMenu from './DrawerMenu';
 
-const HamburgerMenu = () => {
+const HamburgerMenu: React.FC = () => {
   const items = navItems.map((item) => ({
     href: item.href,
     text: item.text,

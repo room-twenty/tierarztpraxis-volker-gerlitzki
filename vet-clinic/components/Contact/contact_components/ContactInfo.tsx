@@ -1,4 +1,4 @@
-const ContactInfo = () => {
+const ContactInfo: React.FC = () => {
   return (
     <div className="flex px-4 pb-4 leading-6">
       <p>

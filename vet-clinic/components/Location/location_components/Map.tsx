@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Map: React.FC = () => {
   return (
     <div className="flex justify-center py-8">
@@ -8,6 +6,7 @@ const Map: React.FC = () => {
         style={{ width: '100%', maxWidth: '600px', height: '35vh' }}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
+        title="Standortkarte"
       />
     </div>
   );

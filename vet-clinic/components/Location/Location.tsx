@@ -1,12 +1,12 @@
-import LocationData from './LocationData';
-import Map from './Map';
+import LocationData from './location_components/LocationData';
+import Map from './location_components/Map';
 
-const Location = () => {
+const Location: React.FC = () => {
   return (
     <section
       id="anfahrt"
-      className="bg-glacier-600 p-2  pb-10 text-white">
-      <div className='py-8'>
+      className="bg-glacier-600 p-2 pb-10 text-white">
+      <div className="py-8">
         <h3 className="text-center text-2xl font-semibold mb-4">
           Hier finden Sie uns!
         </h3>

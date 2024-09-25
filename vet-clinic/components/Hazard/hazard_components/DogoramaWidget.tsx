@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 interface Hazard {
   id: string;
@@ -17,7 +17,7 @@ const warningIconSvg = `
   </svg>
 `;
 
-const DogoramaWidget = () => {
+const DogoramaWidget: React.FC = () => {
   const [hazards, setHazards] = useState<Hazard[]>([]);
   const [error, setError] = useState<boolean>(false);
 
@@ -83,7 +83,6 @@ const DogoramaWidget = () => {
           </a>
         ))}
       </Carousel>
-      {/* Carousel */}
       <div className="mt-4 text-center text-gray-500">
         Powered by{' '}
         <a

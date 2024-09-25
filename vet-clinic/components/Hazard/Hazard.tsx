@@ -1,10 +1,9 @@
-import React from 'react';
-import DogoramaWidget from '../DogoramaWidget/DogoramaWidget';
+import DogoramaWidget from './hazard_components/DogoramaWidget';
 
-const Hazard = () => {
+const Hazard: React.FC = () => {
   return (
     <section className="my-5 py-10">
-      <div className="">
+      <div>
         <h3 className="mb-4 text-center text-2xl font-semibold text-glacier-600">
           Aktuelle <span className="text-red-600">Giftköderwarnungen!</span>
         </h3>

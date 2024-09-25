@@ -1,4 +1,3 @@
-import React from 'react';
 import HamburgerMenu from './HamburgerMenu';
 import ContactMenu from './ContactMenu';
 import LogoImage from './LogoImage';

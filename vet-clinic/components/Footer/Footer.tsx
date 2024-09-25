@@ -8,7 +8,6 @@ import {
 const Footer: React.FC = () => {
   const combinedLinks: { title: string; items: ILink[] }[] = [
     { title: 'Entdecken', items: navItems },
-
     { title: 'Wir achten Ihre Privatsphäre', items: protectedLinks },
     { title: 'Weitere Links', items: links },
   ];

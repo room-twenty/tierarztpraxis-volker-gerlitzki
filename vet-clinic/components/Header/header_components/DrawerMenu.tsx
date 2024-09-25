@@ -3,6 +3,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import NavLink from '../../NavLink/NavLink';
 
 interface DrawerMenuProps {
   drawerId: string;
@@ -47,7 +48,6 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
           htmlFor={drawerId}
           aria-label="close sidebar"
           className="drawer-overlay"></label>
-        {/* Content */}
         <div className="menu min-h-full w-96 bg-[#e7e7e7] p-0 text-base-content">
           <div className="bg-base-200">
             <div
@@ -76,26 +76,32 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({
               </h2>
             </div>
             <div
-              className={`flex flex-col px-5 py-8 text-lg leading-10 text-glacier-600 ${contentClassName}`}
-              style={{
-                boxShadow:
-                  '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-              }}>
-              {items.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  onClick={toggleDrawer}
-                  className={`w-full py-2 font-normal duration-500 ease-in-out ${item.isImportant ? 'text-red-600' : ''}`}>
-                  {item.text}
-                  {item.icon && (
-                    <div
-                      className={`btn ml-4 text-xl ${item.isImportant ? 'bg-red-600' : 'bg-glacier-600'} text-base-200`}>
-                      <FontAwesomeIcon icon={item.icon} />
-                    </div>
-                  )}
-                </a>
-              ))}
+              className={`flex flex-col px-5 py-8 text-lg leading-10 text-glacier-600 ${contentClassName}`}>
+              {items.map((item, index) =>
+                item.href ? (
+                  <NavLink key={index} href={item.href} onClick={toggleDrawer}>
+                    {item.text}
+                    {item.icon && (
+                      <div
+                        className={`btn ml-4 text-xl ${item.isImportant ? 'bg-red-600 hover:bg-red-600' : 'bg-glacier-600 hover:bg-glacier-600'} border-none text-base-200`}>
+                        <FontAwesomeIcon icon={item.icon} />
+                      </div>
+                    )}
+                  </NavLink>
+                ) : (
+                  <span
+                    key={index}
+                    className={`w-full py-2 font-normal duration-500 ease-in-out ${item.isImportant ? 'text-red-600' : ''}`}>
+                    {item.text}
+                    {item.icon && (
+                      <div
+                        className={`btn ml-4 text-xl ${item.isImportant ? 'bg-red-600' : 'bg-glacier-600'} text-base-200`}>
+                        <FontAwesomeIcon icon={item.icon} />
+                      </div>
+                    )}
+                  </span>
+                ),
+              )}
             </div>
           </div>
         </div>
