@@ -1,7 +1,11 @@
+'use client';
+
+import AnimalsButtons from './animals_components/AnimalsButtons';
+
 const AnimalsSection = () => {
   return (
-    <section>
-      <h1>HALLO</h1>
+    <section className="flex flex-col bg-glacier-50 py-32">
+      <AnimalsButtons />
     </section>
   );
 };
