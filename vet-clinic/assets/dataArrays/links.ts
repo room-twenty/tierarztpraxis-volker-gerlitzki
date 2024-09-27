@@ -1,36 +1,49 @@
-interface ILink {
-  link: string;
-  linkText: string;
+export interface ILink {
+  href: string;
+  text: string;
 }
 
 export const links: ILink[] = [
   {
-    link: 'https://www.dght.de/startseite',
-    linkText:
-      'Deutschen Gesellschaft für Herpetologie und Terrarienkunde (DGHT)',
+    href: 'https://www.dght.de/startseite',
+    text: 'Deutschen Gesellschaft für Herpetologie und Terrarienkunde',
   },
   {
-    link: 'https://www.bundestieraerztekammer.de/tieraerzte/beruf/got/',
-    linkText: 'Gebührenordnung für Tierärzte (GOT)',
+    href: 'https://www.bundestieraerztekammer.de/tieraerzte/beruf/got/',
+    text: 'Gebührenordnung für Tierärzte',
   },
   {
-    link: 'http://www.terrarien-freunde-hamburg.de/',
-    linkText: 'Terrarienfreunde Hamburg',
+    href: 'http://www.terrarien-freunde-hamburg.de/',
+    text: 'Terrarienfreunde Hamburg',
   },
   {
-    link: 'https://www.tasso.net/',
-    linkText: 'TASSO e.V. (Tiernotruf)',
+    href: 'https://www.tasso.net/',
+    text: 'TASSO e.V. (Tiernotruf)',
   },
   {
-    link: 'http://www.tierschutzbund.de/00524.html',
-    linkText: 'Deutscher Tierschutzbund e.V',
+    href: 'http://www.tierschutzbund.de/00524.html',
+    text: 'Deutscher Tierschutzbund e.V',
   },
   {
-    link: 'https://www.agila.de/?VermittlerID=11&gclid=Cj0KCQiA1sucBhDgARIsAFoytUtaV3FPyB5cAf9xXKu7m32abyoYxq0VWqoM3iraqP9b34WgCtdtj6QaAkk6EALw_wcB',
-    linkText: 'AGILA Tierversicherung',
+    href: 'https://www.agila.de/?VermittlerID=11&gclid=Cj0KCQiA1sucBhDgARIsAFoytUtaV3FPyB5cAf9xXKu7m32abyoYxq0VWqoM3iraqP9b34WgCtdtj6QaAkk6EALw_wcB',
+    text: 'AGILA Tierversicherung',
   },
   {
-    link: 'https://www.comfortplan.de/tierversicherung',
-    linkText: 'Comfortplan Tierversicherungsvergleich',
+    href: 'https://www.comfortplan.de/tierversicherung',
+    text: 'Comfortplan Tierversicherungsvergleich',
   },
+];
+
+export const protectedLinks: ILink[] = [
+  { href: '/cookies', text: 'Cookies' },
+  { href: '/impressum', text: 'Impressum' },
+  { href: '/datenschutz', text: 'Datenschutz' },
+];
+
+export const navItems: ILink[] = [
+  { href: '/', text: 'Startseite' },
+  { href: '/tiere', text: 'Tiere' },
+  { href: '/aerzte', text: 'Unsere Ärzte' },
+  { href: '/leistungen', text: 'Leistungen' },
+  { href: '/blog', text: 'Blog' },
 ];

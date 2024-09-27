@@ -1,28 +1,28 @@
+import {
+  faPhone,
+  faEnvelope,
+  faBriefcaseMedical,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
+
 interface IContact {
-  title: string;
+  href: string;
   text: string;
-  subtitle?: string;
-  text2?: string;
-  text3?: string;
-  text4?: string;
-  contact_link?: string;
+  icon: IconDefinition;
+  isImportant?: boolean;
 }
 
-export const contactObj: IContact[] = [
+export const contactItems: IContact[] = [
+  { href: 'tel:0407244244', text: '040 - 724 42 44', icon: faPhone },
   {
-    title: 'Mit dem Auto',
-    text: 'Gegenüber der Praxis befinden sich Parkplätze.',
-    subtitle: 'Behindertengerechter Zugang',
-    text2: 'Der Zugang für Rollstuhlfahrer befindet sich Wentorfer Straße 15a.',
-    text3:
-      'Dieser ist durch den kleinen Weg rechts neben dem Haus zu erreichen.',
+    href: 'mailto:praxis@vet-gerlitzki.de',
+    text: 'praxis@vet-gerlitzki.de',
+    icon: faEnvelope,
   },
   {
-    title: 'Öffentliche Verkehrsmittel',
-    text: 'Nutzen Sie den öffentlichen Nahverkehr.',
-    contact_link: 'https://www.hvv.de',
-    text2: 'S-Bahn Linie S2 oder S21 bis Hamburg-Bergedorf.',
-    text3: 'Buslinie 235 bis Rathaus Bergedorf.',
-    text4: 'Von hier aus ca. 2 Minuten zu Fuß.',
+    href: 'tel:040434379',
+    text: 'Tierärztlicher Notruf',
+    icon: faBriefcaseMedical,
+    isImportant: true,
   },
 ];

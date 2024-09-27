@@ -1,12 +1,13 @@
-import Navigation from './Navigation';
-import TopHeader from './TopHeader';
+import Navigation2 from './header_components/Navigation2';
+// import TopHeader from './TopHeader';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <>
-      <TopHeader />
-      <Navigation />
-    </>
+    <header>
+      <Navigation2 />
+      {/* <TopHeader /> */}
+      {/* <Navigation /> */}
+    </header>
   );
 };
 

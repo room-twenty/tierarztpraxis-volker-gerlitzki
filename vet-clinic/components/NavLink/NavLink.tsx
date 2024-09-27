@@ -5,6 +5,7 @@ import Link from 'next/link';
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 const NavLink = ({ href, children }: NavLinkProps) => {
@@ -14,8 +15,8 @@ const NavLink = ({ href, children }: NavLinkProps) => {
       href={href}
       className={
         isActive(href)
-          ? 'scale-110 font-semibold text-steel-blue-50 underline underline-offset-[4px] duration-500 ease-in-out'
-          : 'font-normal text-steel-blue-50 duration-500 ease-in-out hover:scale-110 hover:font-semibold hover:underline hover:underline-offset-[4px]'
+          ? 'w-full translate-x-8 scale-110 p-1 font-semibold underline underline-offset-4 duration-500 ease-in-out'
+          : 'w-full py-2 font-normal duration-500 ease-in-out hover:scale-110 hover:p-3 hover:font-semibold hover:underline hover:underline-offset-4'
       }>
       {children}
     </Link>

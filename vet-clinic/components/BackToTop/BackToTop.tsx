@@ -38,8 +38,9 @@ const BackToTop = () => {
 
   return (
     <motion.button
-      className="fixed bottom-2 right-2 size-16 rounded-full bg-monza-800 text-4xl text-steel-blue-50"
+      className="fixed bottom-10 right-6 size-16 rounded-full bg-monza-800 text-4xl text-steel-blue-50"
       variants={ScrollToTopContainerVariants}
+      style={{ boxShadow: '0 7px 10px rgba(0, 0, 0, 0.5)' }}
       initial="hide"
       whileHover={{
         scale: 1.05,
