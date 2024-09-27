@@ -1,7 +1,7 @@
-import TiereMainSection from '@/components/TiereSection/TiereMainPageSection';
+import AnimalsSection from '@/components/AnimalsSection/AnimalsSection';
 
-const TiereMainPage = () => {
-  return <TiereMainSection />;
+const AnimalMainPage = () => {
+  return <AnimalsSection />;
 };
 
-export default TiereMainPage;
+export default AnimalMainPage;
