@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import CatDemo from '@/public/images/various/cat_demo.jpg';
 import ContactOpening from './contact_components/ContactOpening';
-import ContactInfoMenu from './contact_components/ContactInfoMenu';
+import ContactInfo from './contact_components/ContactInfo';
 
 const Contact: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
       <Image alt="Cat" src={CatDemo} />
       <div className="wrapper px-7 pb-4 pt-7">
         <ContactOpening />
-        <ContactInfoMenu />
+        <ContactInfo />
       </div>
     </section>
   );
