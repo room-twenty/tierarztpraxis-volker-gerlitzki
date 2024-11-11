@@ -19,10 +19,13 @@ export const contactItems: IContact[] = [
     text: 'praxis@vet-gerlitzki.de',
     icon: faEnvelope,
   },
-  // {
-  //   href: 'tel:040434379',
-  //   text: 'Tierärztlicher Notruf',
-  //   icon: faBriefcaseMedical,
-  //   isImportant: true,
-  // },
+];
+
+export const emergencyItem: IContact[] = [
+  {
+    href: 'tel:040434379',
+    text: 'Tierärztlicher Notruf',
+    icon: faBriefcaseMedical,
+    isImportant: true,
+  },
 ];
